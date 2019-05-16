@@ -1,3 +1,23 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+
+
+.navbar{
+  background-image: url(https://www.freewebheaders.com/wordpress/wp-content/gallery/artistic-abstract-hero-headers/dynamic/multicolor-disco-lights-background-music-vector-hd.jpg-nggid045112-ngg0dyn-436x0x100-00f0w010c011r110f110r010t010.jpg);
+}
+.bg{
+  background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;   
+}
+/*--- Nav Scrolling Offset --*/
+.offset:before {
+  height: 4rem;
+  margin-top: -4rem;
+  content: "";
+  display: block;
+}
