@@ -39,7 +39,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         {{!-- <span class="navbar-text bg-dark text-white ">
           A Complete Meme Experience
@@ -112,25 +112,35 @@
 
             </div>
             <div class="col-sm-4">
+              <form>
               <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Catagories Type
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#Catagories">Catagory 1</a>
-    <a class="dropdown-item" href="#Catagories">Catagory 2</a>
-    <a class="dropdown-item" href="#Catagories">Catagory 3</a>
-    <a class="dropdown-item" href="#Catagories">Catagory 4</a>
-    <a class="dropdown-item" href="#Catagories">Catagory 5</a>
+    <a class="dropdown-item" href="#/api/memes/catagories/category1">Category 1</a>
+    <a class="dropdown-item" href="#Catagories">Category 2</a>
+    <a class="dropdown-item" href="#Catagories">Category 3</a>
+    <a class="dropdown-item" href="#Catagories">Category 4</a>
+    <a class="dropdown-item" href="#Catagories">Category 5</a>
   </div>
-</div>
+   <button type="submit" class="btn btn-primary mb-2">Submit</button>
+   </div>
+</form>
             </div>
           </div>
-        </div>
+          </div>
         <div class="container">
           <div class="row">
             <div id="memeRow2" class="col-sm-12">
               Memes will post here
+               <ul>
+        {{#each Memes}}
+        <li>
+	      {{MemeImg}}
+        </li>
+        {{/each}}
+          </ul>
             </div>
           </div>
         </div>

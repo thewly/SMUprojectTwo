@@ -9,10 +9,10 @@ module.exports = function(app) {
   });
 
 // Get memes by category
-app.get("/api/memes/:category", function(req, res) {
+app.get("/api/memes/categories/:catergory", function(req, res) {
   db.Memes.findOne({
     where: {
-      catergory: req.params.catergory
+        catergory: req.params.catergory
     }
   }).then(function(dbMemes) {
     console.log(dbMemes);

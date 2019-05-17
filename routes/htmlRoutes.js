@@ -1,11 +1,11 @@
 var db = require("../models");
-
+console.log(db.Meme);
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Memes.findAll({}).then(function(dbMemes) {
+    db.Meme.findAll({}).then(function(dbMeme) {
       res.render("index", {
-         Meme: dbMemes
+        Meme: dbMeme
       });
     });
   });
