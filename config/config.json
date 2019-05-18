@@ -1,8 +1,13 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password":"toor",
     "database": "meme_db",
+=======
+    "password":"password",
+    "database": "Project2DB",
+>>>>>>> 3367491e26572734cc697a4992d1c47cdb85adb4
     "host": "localhost",
     "dialect": "mysql"
   },

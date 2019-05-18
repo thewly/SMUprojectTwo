@@ -1,7 +1,6 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  
   // Get all examples
   app.get("/api/memes", function(req, res) {
     db.Memes.findAll({}).then(function(dbMemes) {
@@ -24,7 +23,7 @@ module.exports = function(app) {
   // Create a new Meme
   app.post("/api/memes", function(req, res) {
     console.log(req.body);
-    db.Memes.create(req.body).then(function(results) {
+    db.Memes.create(req.body).then(function() {
       res.redirect("/");
     });
   });

@@ -21,7 +21,7 @@ $(document).ready(function() {
   });
 
   function submitMeme(Meme) {
-    $.post("/api/memes/", Meme, function () {
+    $.post("/api/memes/", Meme, function() {
       window.location.href = "/";
       console.log("posting?");
     });

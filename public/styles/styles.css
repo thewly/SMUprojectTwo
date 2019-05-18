@@ -24,3 +24,7 @@
   content: "";
   display: block;
 }
+
+#form-buffer {
+  padding: 1rem;
+}
