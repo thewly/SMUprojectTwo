@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password":"password",
-    "database": "exampledb",
+    "password":"toor",
+    "database": "meme_db",
     "host": "localhost",
     "dialect": "mysql"
   },
