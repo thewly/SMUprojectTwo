@@ -1,7 +1,7 @@
 <body>
   <div class="bg">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-      <a class="navbar-brand bg-dark  text-white" href="#">Meme Database</a>
+      <a class="navbar-brand text-white" href="#">Meme Database</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,10 +9,10 @@
       <div class="collapse navbar-collapse " id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active ">
-            <a class="nav-link bg-dark text-white " href="#MemesOfTheWeek">Memes of the week <span
+            <a class="nav-link text-white " href="#MemesOfTheWeek">Memes of the week <span
                 class="sr-only">(current)</span></a>
           </li>
-          
+
 
 
           {{!-- <li class="nav-item dropdown">
@@ -28,18 +28,18 @@
             </div>
           </li> --}}
           <li class="nav-item">
-            <a class="nav-link bg-dark text-white " href="#Catagories">Catagories</a>
+            <a class="nav-link text-white " href="#Catagories">Catagories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bg-dark text-white " href="#AllMemes">All Memes</a>
+            <a class="nav-link text-white " href="#AllMemes">All Memes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bg-dark text-white " href="#AddYourMeme">Add A Meme</a>
+            <a class="nav-link text-white " href="#AddYourMeme">Add A Meme</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-primary mb-2 my-sm-0" type="submit">Search</button>
         </form>
         {{!-- <span class="navbar-text bg-dark text-white ">
           A Complete Meme Experience
@@ -58,7 +58,7 @@
       <div class="container-fluid">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4 bg-dark text-white">
+            <div id="mowbg" class="col-sm-12 bg-dark text-white">
               <h1>Memes Of The Week</h1>
             </div>
             <div class="col-sm-4">
@@ -105,42 +105,40 @@
       <div class="container-fluid">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4 bg-dark text-white">
-              <h1>Catagories</h1>
-            </div>
-            <div class="col-sm-4">
-
+            <div id="catBG"class="col-sm-8 bg-dark text-white">
+              <h1 class="catH" >Catagories</h1>
             </div>
             <div class="col-sm-4">
               <form>
-              <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Catagories Type
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#/api/memes/catagories/category1">Category 1</a>
-    <a class="dropdown-item" href="#Catagories">Category 2</a>
-    <a class="dropdown-item" href="#Catagories">Category 3</a>
-    <a class="dropdown-item" href="#Catagories">Category 4</a>
-    <a class="dropdown-item" href="#Catagories">Category 5</a>
-  </div>
-   <button type="submit" class="btn btn-primary mb-2">Submit</button>
-   </div>
-</form>
+                <div class="dropdown bg-dark" id="cat-bg">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catagories Type
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#/api/memes/catagories/category1">Category 1</a>
+                    <a class="dropdown-item" href="#Catagories">Category 2</a>
+                    <a class="dropdown-item" href="#Catagories">Category 3</a>
+                    <a class="dropdown-item" href="#Catagories">Category 4</a>
+                    <a class="dropdown-item" href="#Catagories">Category 5</a>
+                  </div>
+                  <button id="cat-sub" type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+              </form>
             </div>
           </div>
-          </div>
+        </div>
         <div class="container">
           <div class="row">
             <div id="memeRow2" class="col-sm-12">
               Memes will post here
-               <ul>
-        {{#each Memes}}
-        <li>
-	      {{MemeImg}}
-        </li>
-        {{/each}}
-          </ul>
+              <ul>
+                {{#each Memes}}
+                <li>
+                  {{MemeImg}}
+                </li>
+                {{/each}}
+              </ul>
             </div>
           </div>
         </div>
@@ -150,7 +148,7 @@
 
     </div>
     <!--- End Catagories Section -->
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -160,14 +158,8 @@
       <div class="container-fluid">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4 bg-dark text-white">
+            <div id="ambg" class="col-sm-12 bg-dark text-white">
               <h1>All Memes</h1>
-            </div>
-            <div class="col-sm-4">
-
-            </div>
-            <div class="col-sm-4">
-
             </div>
           </div>
         </div>
@@ -175,13 +167,13 @@
           <div class="row">
             <div id="memeRow3" class="col-sm-12">
               Memes will post here
-          <ul>
-        {{#each Memes}}
-        <li>
-	      {{MemeImg}}
-        </li>
-        {{/each}}
-          </ul>
+              <ul>
+                {{#each Memes}}
+                <li>
+                  {{MemeImg}}
+                </li>
+                {{/each}}
+              </ul>
             </div>
           </div>
         </div>
