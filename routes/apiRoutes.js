@@ -1,39 +1,59 @@
 var db = require("../models");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Get all examples
-  app.get("/api/memes", function (req, res) {
-    db.Memes.findAll({}).then(function (dbMemes) {
+  app.get("/api/memes", function(req, res) {
+    db.Meme.findAll({}).then(function(dbMemes) {
       res.json(dbMemes);
     });
   });
 
   // Get memes by category
-  app.get("/api/memes/categories/:catergory", function (req, res) {
-    db.Memes.findOne({
+  app.get("/api/memes/categories/:category", function(req, res) {
+    db.Meme.findOne({
       where: {
-        catergory: req.params.catergory
+        category: req.params.category
       }
-    }).then(function (dbMemes) {
+    }).then(function(dbMemes) {
       console.log(dbMemes);
       res.json(dbMemes);
     });
   });
 
-
-
-
   // Create a new Meme
-  //thanks cole
-  //all your base are belong to us
-  app.post("/api/memes", function (req, res) {
-    db.Memes.create({
-      title: req.body.FormName,
-      imageUrl: req.body.FormURL,
-      category: req.body.FormCategory,
-      description: req.body.FormDesc
-    }).then(function (results) {
-      res.json(results);
+  app.post("/api/memes", function(req, res) {
+    db.Meme.create({
+      title: req.body.title,
+      imageUrl: req.body.imageUrl,
+      category: req.body.category,
+      about: req.body.about
+    }).then(function(dbMemes) {
+      res.json(dbMemes);
+    });
+  });
+
+  // Meme deletion
+  app.delete("/api/memes/:id", function(req, res) {
+    db.Meme.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      var obj = {
+        meme: results
+      };
+      res.render("index", obj);
+    });
+  });
+
+  //Meme update
+  app.put("/api/memes/:id", function(req, res) {
+    db.Meme.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function() {
+      res.redirect("/");
     });
   });
 };
