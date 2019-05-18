@@ -3,14 +3,14 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/memes", function(req, res) {
-    db.Memes.findAll({}).then(function(dbMemes) {
+    db.Meme.findAll({}).then(function(dbMemes) {
       res.json(dbMemes);
     });
   });
 
   // Get memes by category
   app.get("/api/memes/categories/:category", function(req, res) {
-    db.Memes.findOne({
+    db.Meme.findOne({
       where: {
         category: req.params.category
       }
@@ -22,15 +22,19 @@ module.exports = function(app) {
 
   // Create a new Meme
   app.post("/api/memes", function(req, res) {
-    console.log(req.body);
-    db.Memes.create(req.body).then(function() {
-      res.redirect("/");
+    db.Meme.create({
+      title: req.body.title,
+      imageUrl: req.body.imageUrl,
+      category: req.body.category,
+      about: req.body.about
+    }).then(function(dbMemes) {
+      res.json(dbMemes);
     });
   });
 
   // Meme deletion
   app.delete("/api/memes/:id", function(req, res) {
-    db.Memes.destroy({
+    db.Meme.destroy({
       where: {
         id: req.params.id
       }
@@ -44,7 +48,7 @@ module.exports = function(app) {
 
   //Meme update
   app.put("/api/memes/:id", function(req, res) {
-    db.Memes.update(req.body, {
+    db.Meme.update(req.body, {
       where: {
         id: req.body.id
       }
