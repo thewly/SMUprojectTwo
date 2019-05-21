@@ -5,6 +5,7 @@ module.exports = function(app) {
   app.get("/api/memes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMemes) {
       res.json(dbMemes);
+      res.redirect("/");
     });
   });
 
@@ -29,6 +30,7 @@ module.exports = function(app) {
       about: req.body.about
     }).then(function(dbMemes) {
       res.json(dbMemes);
+      res.redirect("/#AllMemes");
     });
   });
 
