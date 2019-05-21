@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var memeName = $("#FormName");
   var memeUrl = $("#FormURL");
   var memeCat = $("#FormCategory");
@@ -22,8 +22,12 @@ $(document).ready(function() {
 
   function submitMeme(Meme) {
     $.post("/api/memes/", Meme, function() {
-      window.location.href = "/";
       console.log("posting?");
+    }).then(function(data) {
+      console.log("test" + data);
+      //don't need reload
+      // location.reload();
+      window.location.href = "/#AllMemes";
     });
   }
 });
