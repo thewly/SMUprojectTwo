@@ -30,7 +30,7 @@ module.exports = function(app) {
       about: req.body.about
     }).then(function(dbMemes) {
       res.json(dbMemes);
-      res.redirect("/#AllMemes");
+      res.end();
     });
   });
 
