@@ -1,23 +1,62 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+/* Navbar animation */
 .navbar-toggler {
-  background: white;
+  border: none;
+  background: transparent;
+}
+
+.icon-bar {
+	width: 22px; 
+	height: 2px;
+	background-color: #B6B6B6;
+	display: block;
+	transition: all 0.2s;
+	margin-top: 4px
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+ 
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+ 
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+ 
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+ 
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+ 
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
 }
 
 /* header */
-.navbar{
-  background-image: url(https://www.freewebheaders.com/wordpress/wp-content/gallery/artistic-abstract-hero-headers/dynamic/multicolor-disco-lights-background-music-vector-hd.jpg-nggid045112-ngg0dyn-436x0x100-00f0w010c011r110f110r010t010.jpg);
+
+.navbar {
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/04/1black_wood_-grain-texture_11-1024x647.jpg);
 }
-/* background */
-.bg{
-  background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+
+#MemeDatabase {
+  background-image: url(https://lh3.googleusercontent.com/K-kCKvgDiZw4sZAiNkRhjYD8YX9YPhCcR6KuS_xVbqCQeeSTmvsrSlpY00NxzpvglLwOjA=s85);
   height: 100%;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;   
 }
+
 /*--- Nav Scrolling Offset --*/
+
 .offset:before {
   height: 4rem;
   margin-top: -4rem;
@@ -25,6 +64,194 @@
   display: block;
 }
 
+/* background fix */
+
+#cat-bg, #mowbg, #ambg, #catBG {
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/04/1black_wood_-grain-texture_11-1024x647.jpg);
+  padding: 9px;
+}
+
+#cat-bg {
+  padding-bottom: 15px;
+}
+
+/* Cat submit button fix */
+
+#cat-sub {
+  margin-top: 8px;
+}
+
 #form-buffer {
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/04/1black_wood_-grain-texture_11-1024x647.jpg);
   padding: 1rem;
 }
+
+.form1, .form2 {
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/04/1black_wood_-grain-texture_11-1024x647.jpg);
+}
+
+/* animation */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80rem);
+  }
+  80% {
+    transform: translateX(-40rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80rem);
+  }
+  20% {
+    transform: rotate(45deg) translateX(70rem)
+  }
+  30% {
+    transform: rotate(90deg) translateX(50rem)
+  }
+  40% {
+    transform: rotate(135deg) translateX(30rem)
+  }
+  50% {
+    transform: rotate(180deg) translateX(20rem)
+  }
+  70% {
+    transform: rotate(225deg) translateX(10rem)
+  }
+  80% {
+    transform: rotate(270deg) translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) translate(0);
+  }
+}
+
+/* format reset  */
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  background-color: #000000;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-image: url(https://wallpapertag.com/wallpaper/full/7/2/8/118913-full-size-white-wood-background-1920x1080.jpg);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 1s ease-out;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+}
+
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(44, 206, 255, 0.8), rgba(0, 37, 245, 0.8));
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* This is the start of media queries. */
+
+/* This media querie will keep the website the same for slightly smaller screens */
+
+@media screen and (max-width: 980px) {}
+
+/* This media querie will alter the website for screens 641-768px wide. */
+
+@media screen and (max-width: 768px) {
+  #cat-bg {
+    padding-right: 200px;
+  }
+}
+
+/* This media querie will alter the website for screens 640px and below. */
+
+@media screen and (max-width: 640px) {}
