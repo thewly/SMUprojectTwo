@@ -1,21 +1,24 @@
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-    <a class="navbar-brand text-white" href="#">Meme Database</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active ">
-          <a class="nav-link text-white " href="#MemesOfTheWeek">Memes of the week <span
-              class="sr-only">(current)</span></a>
-        </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+      <a class="navbar-brand text-white" href="#">Meme Database</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active ">
+            <a class="nav-link text-white " href="#MemesOfTheWeek">Memes of the week <span
+                class="sr-only">(current)</span></a>
+          </li>
+          
 
 
 
+          {{!-- <li class="nav-item dropdown">
 
-        {{!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" class="nav-link bg-dark text-white " href="#Catagories"
               id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Categories
@@ -219,37 +222,34 @@
         <div class="container">
           <div id="form-buffer" class="bg-dark">
 
-            <h1 class="bg-dark text-white">Add Your Meme</h1>
-            <form class="bg-dark">
-              <div class="form-group text-white">
-                <label for="FormControlInput1">Meme Name</label>
-                <input type="text" class="form-control" id="FormName">
+          <h1 class="bg-dark text-white form1">Add Your Meme</h1>
+          <form class="bg-dark form2">
+            <div class="form-group text-white">
+              <label for="FormControlInput1">Meme Name</label>
+              <input type="text" class="form-control" id="FormName">
+            </div>
+            <div class="form-group text-white">
+              <label for="FormControlInput1">Meme URL</label>
+              <input type="text" class="form-control" id="FormURL">
+            </div>
+            <div class="form-group text-white">
+              <label for="exampleFormControlTextarea1">Description</label>
+              <textarea class="form-control" id="FormDesc" rows="3"></textarea>
+            </div>
+            <div class="form-group text-white">
+              <label for="FormControlSelect1">Catagory</label>
+              <select class="form-control" id="FormCategory">
+                <option>Political</option>
+                <option>Dank</option>
+                <option>Dank Christian</option>
+                <option>Animal</option>
+                <option>Facebook</option>
+              </select>
+              <div class="col-auto">
+                <br>
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
               </div>
-              <div class="form-group text-white">
-                <label for="FormControlInput1">Meme URL</label>
-                <input type="text" class="form-control" id="FormURL">
-              </div>
-              <div class="form-group text-white">
-                <label for="exampleFormControlTextarea1">Description</label>
-                <textarea class="form-control" id="FormDesc" rows="3"></textarea>
-              </div>
-              {{!-- <div class="form-group text-white">
-            <label for="FormControlInput1">Description</label>
-            <input type="text" class="form-control" id="FormDescription">
-          </div> --}}
-              <div class="form-group text-white">
-                <label for="FormControlSelect1">Catagory</label>
-                <select class="form-control" id="FormCategory">
-                  <option>Political</option>
-                  <option>Dank</option>
-                  <option>Dank Christian</option>
-                  <option>Animal</option>
-                  <option>Facebook</option>
-                </select>
-                <div class="col-auto">
-                  <br>
-                  <button type="submit" class="btn btn-primary mb-2">Submit</button>
-                </div>
+
 
             </form>
           </div>
