@@ -191,10 +191,15 @@
           <div class="row">
             <div id="memeRow3" class="col-sm-12">
               Memes will post here
+              <h1>TEST</h1>
               <ul>
-                {{#each Memes}}
+                {{#each Meme}}
                 <li>
-                  {{MemeImg}}
+                  <h1>Title: {{title}}</h1>
+                  <img src="{{imageUrl}}" alt="{{title}}" />
+                  <h3>{{about}}</h3>
+                  <h4>{{category}}</h4>
+                  <h5>{{importance}}</h5>
                 </li>
                 {{/each}}
               </ul>
