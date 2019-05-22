@@ -16,9 +16,8 @@ module.exports = function(app) {
         category: req.params.category
       }
     }).then(function(dbMemes) {
-      res.render("categories", {
-        Meme: dbMemes
-      });
+      console.log(dbMemes);
+      res.json(dbMemes);
     });
   });
 

@@ -1,6 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var memeName = $("#FormName");
   var memeUrl = $("#FormURL");
+  var memeCat = $("#FormCategory");
   var memeDesc = $("#FormDesc");
   var sub = $("#AddYourMeme");
   $(sub).on("submit", function handleFormSubmit(event) {
@@ -19,22 +20,13 @@ $(document).ready(function() {
     submitMeme(newMeme);
   });
 
-  $("#FormCategory").on("click", function(event){
-    event.preventDefault();
-    var whatCat = $("#categorySelect").val();
-
-    $.get("/api/memes/categories/" + whatCat, function(data) {
-    });
-
-  })
-
   function submitMeme(Meme) {
     $.post("/api/memes/", Meme, function() {
       console.log("posting?");
     }).then(function(data) {
       console.log("test" + data);
       //don't need reload
-      location.reload();
+      // location.reload();
       window.location.href = "/#AllMemes";
     });
   }
