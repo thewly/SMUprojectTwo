@@ -189,19 +189,7 @@
         <div class="container">
           <div class="row">
             {{#each Meme}}
-            <div id="memeRow3" class="col-sm-3">
-              <div class="card-deck">
-                <div class="card">
-                  <img src="{{imageUrl}}" class="card-img-top" alt="{{title}}">
-                  <div class="card-body">
-                    <h5 class="card-title">{{title}}</h5>
-                    <p class="card-text">{{category}}</p>
-                    <p class="card-text">{{about}}</p>
-                    <p class="card-text"><small class="text-muted">{{importance}}</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              {{> memes/meme-block}}
             {{/each}}
           </div>
 
