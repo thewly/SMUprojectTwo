@@ -1,0 +1,86 @@
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+        <a class="navbar-brand text-white" href="#">Meme Database</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active ">
+                    <a class="nav-link text-white " href="#MemesOfTheWeek">Memes of the week <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#Catagories">Catagories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#AllMemes">All Memes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#AddYourMeme">Add A Meme</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary mb-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!--- Start Catagories Section -->
+    <div id="Catagories" class="offset">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div id="catBG" class="col-sm-8 bg-dark text-white">
+                        <h1 class="catH">Catagories</h1>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="dropdown bg-dark" id="cat-bg">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <select class="form-control" id="categorySelect">
+                                            <option value="Political">Political</option>
+                                            <option value="Dank">Dank</option>
+                                            <option value="Dank Christian">Dank Christian</option>
+                                            <option value="Animal">Animal</option>
+                                            <option value="Facebook">Facebook</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <button id="FormCategory" type="submit"
+                                            class="btn btn-primary mb-2">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+          <div class="row">
+            {{#each Meme}}
+            <div id="memeRow3" class="col-sm-3">
+              <div class="card-deck">
+                <div class="card">
+                  <img src="{{imageUrl}}" class="card-img-top" alt="{{title}}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">{{category}}</p>
+                    <p class="card-text">{{about}}</p>
+                    <p class="card-text"><small class="text-muted">{{importance}}</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
