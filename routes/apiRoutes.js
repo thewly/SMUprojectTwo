@@ -22,6 +22,17 @@ module.exports = function(app) {
     });
   });
 
+  //Get Meme by ID
+  app.get("/api/memes/:id", function(req, res) {
+    db.Meme.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbMemes) {
+      res.json(dbMemes);
+    });
+  });
+
   // Create a new Meme
   app.post("/api/memes", function(req, res) {
     db.Meme.create({

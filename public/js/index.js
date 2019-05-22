@@ -1,46 +1,30 @@
 $(document).ready(function () {
+  $("#AddYourMeme").on("submit", handleMemeSubmit);
+  $(".like").on("click", handleMemeLike);
+  $(".save").on("click", handleMemeSave);
+  $(".delete").on("click", handleMemeDelete);
+});
+
+//the functions that make everything above work live here
+
+function handleMemeSubmit(event) {
+  console.log("Meme submitted!");
+  event.preventDefault();
   var memeName = $("#FormName");
   var memeUrl = $("#FormURL");
+  var memeCat = $("#FormCategory");
   var memeDesc = $("#FormDesc");
-  var sub = $("#AddYourMeme");
-  $(sub).on("submit", function handleFormSubmit(event) {
-    event.preventDefault();
-    var memeName = $("#FormName");
-    var memeUrl = $("#FormURL");
-    var memeCat = $("#FormCategory");
-    var memeDesc = $("#FormDesc");
-    if (!memeUrl.val().trim() && !memeName.val().trim()) {
-      return;
-    }
-    var newMeme = {
-      title: memeName.val().trim(),
-      imageUrl: memeUrl.val().trim(),
-      category: memeCat.val().trim(),
-      about: memeDesc.val().trim()
-    };
-    submitMeme(newMeme);
-  });
-
-  $("#FormCategory").on("click", function (event) {
-    event.preventDefault();
-    var whatCat = $("#categorySelect").val();
-
-    $.get("/api/memes/categories/" + whatCat, function (data) {
-    });
-
-  })
-
-  function submitMeme(Meme) {
-    $.post("/api/memes/", Meme, function () {
-      console.log("posting?");
-    }).then(function (data) {
-      console.log("test" + data);
-      //don't need reload
-      location.reload();
-      window.location.href = "/#AllMemes";
-    });
+  if (!memeUrl.val().trim() && !memeName.val().trim()) {
+    return;
   }
-});
+  var newMeme = {
+    title: memeName.val().trim(),
+    imageUrl: memeUrl.val().trim(),
+    category: memeCat.val().trim(),
+    about: memeDesc.val().trim()
+  };
+  submitMeme(newMeme);
+}
 
 function submitMeme(Meme) {
   $.post("/api/memes/", Meme, function () {
@@ -53,20 +37,43 @@ function submitMeme(Meme) {
   });
 }
 
+// DELETE Stuff
+function handleMemeDelete() {
+  console.log("Delete hit!");
+  var currentMeme = $(this)
+    .parent()
+    .parent()
+    .parent()
+    .data("meme");
+  console.log(currentMeme);
+  deleteMeme(currentMeme);
+}
+
 function deleteMeme(id) {
   $.ajax({
     method: "DELETE",
     url: "/api/memes/" + id
-  }).then(function () {
+  }).then(function() {
     location.reload();
     window.location.href = "/#AllMemes";
   });
 }
 
-function handleMemeDelete() {
-  var currentMeme = $(this)
-    .parent()
-    .parent()
-    .data("post");
-  deletePost(currentPost.id);
+//Like Stuff
+function handleMemeLike() {
+  console.log("Meme liked!");
 }
+
+//Save Stuff
+function handleMemeSave() {
+  console.log("Meme Saved!");
+}
+
+// $("#FormCategory").on("click", function (event) {
+//   event.preventDefault();
+//   var whatCat = $("#categorySelect").val();
+
+//   $.get("/api/memes/categories/" + whatCat, function(data) {
+//   });
+
+// })
