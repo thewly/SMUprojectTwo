@@ -24,6 +24,8 @@ $(document).ready(function() {
     var whatCat = $("#categorySelect").val();
 
     $.get("/api/memes/categories/" + whatCat, function(data) {
+      // document.write(data);
+      console.log(data);
     });
 
   })
