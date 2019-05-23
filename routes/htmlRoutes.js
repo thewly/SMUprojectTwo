@@ -10,7 +10,10 @@ module.exports = function(app) {
     });
   });
 
-
+  app.get("/categories", function(req, res) {
+    res.render("categories");
+  });
+  
   app.get("/views/team.handlebars", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
       res.render("team", {
