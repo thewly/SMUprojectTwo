@@ -66,6 +66,22 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/searchResults", function(req, res) {
+    db.Meme.findAll({}).then(function(dbMeme) {
+      res.render("searchResults", {
+        Meme: dbMeme
+      });
+    });
+  });
+
+  app.get("/memeWars", function(req, res) {
+    db.Meme.findAll({}).then(function(dbMeme) {
+      res.render("memeWar", {
+        Meme: dbMeme
+      });
+    });
+  });
+
   // // Render 404 page for any unmatched routes
   // app.get("*", function(req, res) {
   //   res.render("404");
