@@ -29,7 +29,7 @@ module.exports = function(app) {
       var hbsObject = {
         searchResults: results
       };
-      res.render("example", hbsObject);
+      res.render("searchResults", hbsObject);
     });
   });
 
