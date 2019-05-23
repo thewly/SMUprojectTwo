@@ -37,19 +37,6 @@ function submitMeme(Meme) {
   });
 }
 
-<<<<<<< HEAD
-  function submitMeme(Meme) {
-    $.post("/api/memes/", Meme, function() {
-      console.log("posting?");
-    }).then(function(data) {
-      console.log("test" + data);
-      //don't need reload
-      // location.reload();
-      window.location.href = "/#AllMemes";
-    });
-  }
-  
-=======
 // DELETE Stuff
 function handleMemeDelete() {
   console.log("Delete hit!");
@@ -120,7 +107,6 @@ $("#FormCategory").on("click", function(event){
     // document.write(data);
     console.log(data);
   });
->>>>>>> master
 });
 
 //TEST AREA
