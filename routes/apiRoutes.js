@@ -62,9 +62,10 @@ module.exports = function(app) {
 
   //Meme update
   app.put("/api/memes/:id", function(req, res) {
+    console.log(req.params.id);
     db.Meme.update(req.body, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     }).then(function() {
       res.redirect("/");

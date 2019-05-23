@@ -62,6 +62,36 @@ function deleteMeme(id) {
 //Like Stuff
 function handleMemeLike() {
   console.log("Meme liked!");
+  var currentLike = $(this)
+    .parent()
+    .data("likes");
+  if (currentLike === "") {
+    console.log("in here!");
+    currentLike = 0;
+    //console.log(currentLike);
+  } //else {
+  console.log(currentLike);
+  likeMeme(currentLike);
+}
+
+function likeMeme(like) {
+  var id = $(this)
+    .parent()
+    .parent()
+    .parent()
+    .data("meme");
+  like++;
+  var newLike = like;
+  var data = { "importance": "newLike" };
+  console.log(data);
+  $.ajax({
+    type: "PUT",
+    data: data,
+    url: "/api/memes/" + id
+  }).then(function() {
+    location.reload();
+    window.location.href = "/#AllMemes";
+  });
 }
 
 //Save Stuff
@@ -77,3 +107,5 @@ function handleMemeSave() {
 //   });
 
 // })
+
+//TEST AREA
