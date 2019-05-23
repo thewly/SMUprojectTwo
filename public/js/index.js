@@ -99,13 +99,14 @@ function handleMemeSave() {
   console.log("Meme Saved!");
 }
 
-// $("#FormCategory").on("click", function (event) {
-//   event.preventDefault();
-//   var whatCat = $("#categorySelect").val();
+$("#FormCategory").on("click", function(event){
+  event.preventDefault();
+  var whatCat = $("#categorySelect").val();
 
-//   $.get("/api/memes/categories/" + whatCat, function(data) {
-//   });
-
-// })
+  $.get("/api/memes/categories/" + whatCat, function(data) {
+    // document.write(data);
+    console.log(data);
+  });
+});
 
 //TEST AREA

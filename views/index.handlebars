@@ -1,28 +1,28 @@
 <body>
-  {{!-- MOVE NAV TO MAIN.HANDLEBARS WHY IS IT HERE --}}
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-    <a class="navbar-brand text-white" href="#">Meme Database</a>
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="icon-bar top-bar"></span>
-      <span class="icon-bar middle-bar"></span>
-      <span class="icon-bar bottom-bar"></span>
-    </button>
-
-    <div class="collapse navbar-collapse " id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active ">
-          <a class="nav-link text-white " href="#MemesOfTheWeek">Memes of the week <span
-              class="sr-only">(current)</span></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+      <a class="navbar-brand text-white" href="/">Meme Database</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active ">
+            <a class="nav-link text-white " href="/views/popularMemes.handlebars">Popular Memes</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="/views/catergories.handlebars">Catagories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/categories">Catagories</a>
+          <a class="nav-link text-white " href="/views/allMemes.handlebars">All Memes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="#AllMemes">All Memes</a>
+          <a class="nav-link text-white " href="/views/addAMeme.handlebars">Add A Meme</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="#AddYourMeme">Add A Meme</a>
+          <a class="nav-link text-white " href="/views/team.handlebars">Team</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -57,14 +57,8 @@
     </header>
 
   </div>
-  <!--- End  Section -->
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
   <div class="bg">
+<<<<<<< HEAD
     <!--- Start Memes Of The Week  Section -->
     <div id="MemesOfTheWeek" class="offset">
       <div class="container-fluid">
@@ -228,42 +222,10 @@
 
 
 
+=======
+>>>>>>> de80afaf38b70b5cd022e6271d68e8e0e8743e8d
     </div>
 </body>
-
-
-{{!-- 
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group"> --}}
-{{!-- {{#each examples}} --}}
-{{!-- <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li> --}}
-{{!-- {{/each}} --}}
-{{!-- </ul>
-      </div>
-    </div>
-  </div>
-</div> --}}
-
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
