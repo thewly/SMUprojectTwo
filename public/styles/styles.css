@@ -171,7 +171,7 @@ body {
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-in;
   /*
         animation-delay: 3s;
@@ -255,3 +255,119 @@ body {
 /* This media querie will alter the website for screens 640px and below. */
 
 @media screen and (max-width: 640px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+.team-header{
+  color: whitesmoke
+}
+.team .inner-content
+{
+	position: relative;
+	width: 265px;
+	height: 225px;
+
+}
+
+.team .inner-content img
+{
+	width: 100%;
+  height: 100%
+  
+}
+
+.team .inner-content .overlay-content
+{
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	
+}
+
+
+
+
+.team .inner-content:hover .overlay-content
+{
+	top: 0px;
+}
+
+
+
+ul.member-social-links li
+{
+	font-size: 14px;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	}
+
+ul.member-social-links li a
+{
+	color: #fff;
+}
+
+ul.member-social-links li i
+{
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+
+
+
+ul.member-social-links li i.fa-file
+{
+	background-color: #0f9926;
+}
+
+ul.member-social-links li i.fa-linkedin
+{
+	background-color: #007bb6;
+}
+ul.member-social-links li i.fa-github
+{
+	background-color: #000000;
+}
+
+.team img
+{
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+}
+
+.team li .inner-content
+{
+	overflow: hidden;
+}
+
+.team .inner-content:hover img
+{
+	transform:scale(1.3,1.3);
+	-moz-transform:scale(1.3,1.3);
+	-ms-transform:scale(1.3,1.3);
+	-webkit-transform:scale(1.3,1.3);
+	-o-transform:scale(1.3,1.3);
+}

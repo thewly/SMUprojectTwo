@@ -38,21 +38,51 @@
 
 
 
+<div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div id="catBG" class="col-sm-8 bg-dark text-white">
+              <h1 class="catH">Catagories</h1>
+            </div>
+            <div class="col-sm-4">
+              <form>
+                <div class="dropdown bg-dark" id="cat-bg">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catagories Type
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#/api/memes/catagories/category1">Category 1</a>
+                    <a class="dropdown-item" href="#Catagories">Category 2</a>
+                    <a class="dropdown-item" href="#Catagories">Category 3</a>
+                    <a class="dropdown-item" href="#Catagories">Category 4</a>
+                    <a class="dropdown-item" href="#Catagories">Category 5</a>
+                  </div>
+                  <button id="cat-sub" type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div id="memeRow2" class="col-sm-12">
+              Memes will post here
+              <ul>
+                {{#each Memes}}
+                <li>
+                  {{MemeImg}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
 
 
+      </div>
 
-  <!--- Start Memes Of The Week  Section -->
-  <div id="MemeDatabase" class="offset">
-    <header class="header">
-
-
-      <div class="header__text-box">
-        <h1 class="heading-primary">
-          <span class="heading-primary--main">Meme Database</span>
-          <span class="heading-primary--sub">a full meme resource</span>
-        </h1>
-
-
+    </div>
       </div>
     </header>
 
@@ -60,6 +90,3 @@
   <div class="bg">
     </div>
 </body>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
