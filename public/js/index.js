@@ -4,13 +4,10 @@ $(document).ready(function() {
   $(".save").on("click", handleMemeSave);
   $(".delete").on("click", handleMemeDelete);
   $("#FormCategory").on("click", handleMemeSearch);
-  $("#search-btn").on("click", function runSearch(event) {
-    console.log("search hit");
+  $("#search-btn").on("click", function (event) {
     event.preventDefault();
     console.log("button-test");
-    var memeSearched = $("#meme-search")
-      .val()
-      .trim();
+    var memeSearched = $("#meme-search").val().trim();
     var postData = {
       memeSearched: memeSearched
     };
