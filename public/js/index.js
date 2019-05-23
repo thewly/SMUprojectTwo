@@ -26,9 +26,9 @@ $(document).ready(function() {
   });
 });
 
-var container = $(".meme-container");
-
 //the functions that make everything above work live here
+
+//Submit a new meme
 
 function handleMemeSubmit(event) {
   console.log("Meme submitted!");
@@ -122,78 +122,13 @@ function handleMemeSave() {
   console.log("Meme Saved!");
 }
 
-//TEST AREA
+//
 
 function handleMemeSearch(event) {
   event.preventDefault();
   var whatCat = $("#categorySelect").val();
-  $.get("/api/memes/categories/" + whatCat, function(data) {
-    // document.write(data);
-    console.log(data);
-    buildSearch(data);
-  });
+  console.log("\nWhatCat?: " + whatCat);
+  window.location.href = "/categories/" + whatCat;
 }
 
-function buildSearch(data) {
-  container.empty();
-  for (var i = 0; i < data.length; i++) {
-    var id = data[i].id;
-    var title = data[i].title;
-    var imageUrl = data[i].imageUrl;
-    var importance = data[i].importance;
-    var about = data[i].about;
-
-    var newMeme = $("<div>");
-    newMeme.addClass("col-sm-3");
-    newMeme.append(cardDeck);
-
-    var cardDeck = $("<div>");
-    cardDeck.addClass("card-deck");
-    cardDeck.attr("data-meme", id);
-    cardDeck.append(card);
-
-    var card = $("<div>");
-    card.addClass("card");
-    card.append(image);
-    card.append(cardDiv);
-
-    var cardDiv = $("<div>");
-    cardDiv.addClass("card-body");
-    cardDiv.attr("data-likes", importance);
-    cardDiv.append(name);
-    cardDiv.append(aboutText);
-    cardDiv.append(likes);
-    cardDiv.append(deleteBtn);
-    cardDiv.append(likeBtn);
-    cardDiv.append(saveBtn);
-
-    var image = $("<img>");
-    image.addClass("card-img-top");
-    image.attr("src", imageUrl);
-
-    var name = $("<h5>");
-    name.addClass("card-title");
-    name.text(title);
-
-    var aboutText = $("<p>");
-    aboutText.addClass("card-text");
-    aboutText.text(about);
-
-    var likes = $("<p>");
-    likes.addClass("card-text");
-    likes.text(importance);
-
-    var deleteBtn = $("<button>");
-    deleteBtn.addClass("btn btn-danger delete");
-    deleteBtn.html("<i class='far fa-trash-alt'></i>");
-
-    var likeBtn = $("<button>");
-    likeBtn.addClass("btn btn-danger delete");
-    likeBtn.html("<i class='far fa-thumbs-up'></i>");
-
-    var saveBtn = $("<button>");
-    saveBtn.addClass("btn btn-danger delete");
-    saveBtn.html("<i class='far fa-save'></i>");
-    container.append(newMeme);
-  }
-}
+//TEST AREA

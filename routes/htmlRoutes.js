@@ -30,6 +30,18 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/categories/:category", function(req, res) {
+    db.Meme.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(dbMeme) {
+      res.render("categories", {
+        Meme: dbMeme
+      });
+    });
+  });
+
   app.get("/allMemes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
       res.render("allMemes", {
