@@ -66,6 +66,20 @@ module.exports = function(app) {
     }).then(function(dbMemes) {
       console.log(dbMemes);
       res.json(dbMemes);
+      // res.render("categories", {
+      //   Meme: dbMemes
+      // });
+    });
+  });
+
+  //Get Meme by ID
+  app.get("/api/memes/:id", function(req, res) {
+    db.Meme.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbMemes) {
+      res.json(dbMemes);
     });
   });
 
@@ -98,9 +112,10 @@ module.exports = function(app) {
 
   //Meme update
   app.put("/api/memes/:id", function(req, res) {
+    console.log(req.params.id);
     db.Meme.update(req.body, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     }).then(function() {
       res.redirect("/");
