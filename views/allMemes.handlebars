@@ -1,80 +1,60 @@
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-      <a class="navbar-brand text-white" href="/">Meme Database</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active ">
-            <a class="nav-link text-white " href="/views/popularMemes.handlebars">Popular Memes</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="/views/catergories.handlebars">Catagories</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+    <a class="navbar-brand text-white" href="/">Meme Database</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active ">
+          <a class="nav-link text-white " href="/popularMemes">Popular Memes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/allMemes.handlebars">All Memes</a>
+          <a class="nav-link text-white " href="/categories">Categories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/addAMeme.handlebars">Add A Meme</a>
+          <a class="nav-link text-white " href="/allMemes">All Memes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/team.handlebars">Team</a>
+          <a class="nav-link text-white " href="/addAMeme">Add A Meme</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/memeWars.handlebars" target="blank_">Meme War</a>
+          <a class="nav-link text-white " href="/team">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/searchResults.handlebars">Search</a>
+          <a class="nav-link text-white " href="/memeWars" target="blank_">Meme War</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="/searchResults">Search</a>
         </li>        
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary mb-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" id="meme-search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary mb-2 my-sm-0" type="submit" id="search-btn">Search</button>
       </form>
        </div>
   </nav>
+
   <br><br><br><br>
 
-
-
-
-
-
-
-
-<div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            <div id="ambg" class="col-sm-12 bg-dark text-white">
-              <h1>All Memes</h1>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            {{#each Meme}}
-            <div id="memeRow3" class="col-sm-3">
-              <div class="card-deck">
-                <div class="card">
-                  <img src="{{imageUrl}}" class="card-img-top" alt="{{title}}">
-                  <div class="card-body">
-                    <h5 class="card-title">{{title}}</h5>
-                    <p class="card-text">{{category}}</p>
-                    <p class="card-text">{{about}}</p>
-                    <p class="card-text"><small class="text-muted">{{importance}}</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {{/each}}
-          </div>
-
-
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div id="ambg" class="col-sm-12 bg-dark text-white">
+          <h1>All Memes</h1>
         </div>
       </div>
-      
+    </div>
+    <div class="container">
+      <div class="row">
+        {{#each Meme}}
+        {{> memes/meme-block}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
 </body>

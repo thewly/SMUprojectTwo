@@ -10,11 +10,11 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/categories", function(req, res) {
-    res.render("categories");
-  });
-  
-  app.get("/views/team.handlebars", function(req, res) {
+  // app.get("/categories", function(req, res) {
+  //   res.render("categories");
+  // });
+
+  app.get("/team", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
       res.render("team", {
         Meme: dbMeme
@@ -22,17 +22,27 @@ module.exports = function(app) {
     });
   });
 
-
-  app.get("/views/catergories.handlebars", function(req, res) {
+  app.get("/categories", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
-      res.render("catergories", {
+      res.render("categories", {
         Meme: dbMeme
       });
     });
   });
 
+  app.get("/categories/:category", function(req, res) {
+    db.Meme.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(dbMeme) {
+      res.render("categories", {
+        Meme: dbMeme
+      });
+    });
+  });
 
-  app.get("/views/allMemes.handlebars", function(req, res) {
+  app.get("/allMemes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
       res.render("allMemes", {
         Meme: dbMeme
@@ -40,8 +50,7 @@ module.exports = function(app) {
     });
   });
 
-
-  app.get("/views/popularMemes.handlebars", function(req, res) {
+  app.get("/popularMemes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
       res.render("popularMemes", {
         Meme: dbMeme
@@ -49,25 +58,32 @@ module.exports = function(app) {
     });
   });
 
-
-  app.get("/views/addAMeme.handlebars", function(req, res) {
+  app.get("/addAMeme", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
       res.render("addAMeme", {
         Meme: dbMeme
       });
     });
   });
-  // Load example page and pass in an example by id
-  // app.get("/example/:id", function(req, res) {
-  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  app.get("/searchResults", function(req, res) {
+    db.Meme.findAll({}).then(function(dbMeme) {
+      res.render("searchResults", {
+        Meme: dbMeme
+      });
+    });
   });
+
+  app.get("/memeWars", function(req, res) {
+    db.Meme.findAll({}).then(function(dbMeme) {
+      res.render("memeWar", {
+        Meme: dbMeme
+      });
+    });
+  });
+
+  // // Render 404 page for any unmatched routes
+  // app.get("*", function(req, res) {
+  //   res.render("404");
+  // });
 };

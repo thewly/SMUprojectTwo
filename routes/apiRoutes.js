@@ -37,29 +37,13 @@ module.exports = function(app) {
       var hbsObject = {
         searchResults: results
       };
-      res.render("example", hbsObject);
+      res.render("searchResults", hbsObject);
     });
   });
 
-  // Get a specific meme
-  // app.post("/api/memes/search", function(req, res) {
-  //   console.log(req.body.memeSearched);
-  //   db.Meme.findAll({
-  //     where: {
-  //       title: req.body.memeSearched
-  //     }
-  //   }).then(function(results) {
-  //     console.log("working?" + results);
-  //     var hbsObject = {
-  //       searchResults: results
-  //     };
-  //     res.render("example", hbsObject);
-  //   });
-  // });
-
   // Get memes by category
   app.get("/api/memes/categories/:category", function(req, res) {
-    db.Meme.findOne({
+    db.Meme.findAll({
       where: {
         category: req.params.category
       }

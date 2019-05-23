@@ -29,7 +29,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="/searchResults">Search</a>
-        </li>          
+        </li>        
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" id="meme-search" type="search" placeholder="Search" aria-label="Search">
@@ -37,43 +37,47 @@
       </form>
        </div>
   </nav>
+
   <br><br><br><br>
 
-  <div id="AddYourMeme" class="container">
-    <div id="form-buffer" class="bg-dark">
-
-      <h1 class="bg-dark text-white form1">Add Your Meme</h1>
-      <form class="bg-dark form2">
-        <div class="form-group text-white">
-          <label for="FormControlInput1">Meme Name</label>
-          <input type="text" class="form-control" id="FormName">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div id="catBG" class="col-sm-8 bg-dark text-white">
+          <h1 class="catH">Categories</h1>
         </div>
-        <div class="form-group text-white">
-          <label for="FormControlInput1">Meme URL</label>
-          <input type="text" class="form-control" id="FormURL">
-        </div>
-        <div class="form-group text-white">
-          <label for="exampleFormControlTextarea1">Description</label>
-          <textarea class="form-control" id="FormDesc" rows="3"></textarea>
-        </div>
-        <div class="form-group text-white">
-          <label for="FormControlSelect1">Catagory</label>
-          <select class="form-control" id="FormCategory">
-            <option>Political</option>
-            <option>Dank</option>
-            <option>Dank Christian</option>
-            <option>Animal</option>
-            <option>Facebook</option>
-          </select>
-          <div class="col-auto">
-            <br>
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <select class="form-control" id="categorySelect">
+                  <option value="Political">Political</option>
+                  <option value="Dank">Dank</option>
+                  <option value="Dank Christian">Dank Christian</option>
+                  <option value="Animal">Animal</option>
+                  <option value="Facebook">Facebook</option>
+                </select>
+              </div>
+              <div class="col">
+                <button id="FormCategory" type="submit" class="btn btn-primary mb-2">Submit</button>
+              </div>
+            </div>
           </div>
-
-
-      </form>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="meme-container">
+      <div class="row">
+        {{#each Meme}}
+        {{> memes/meme-cat}}
+        {{/each}}
+      </div>
     </div>
   </div>
+  </div>
+
+  </div>
+
   </div>
   </div>
   </header>
@@ -81,10 +85,4 @@
   </div>
   <div class="bg">
   </div>
-
-
-
-
-
-
 </body>
