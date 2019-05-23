@@ -50,7 +50,235 @@
       </div>
     </header>
   </div>
+<<<<<<< HEAD
 
   <div class="bg"></div>
 
 </body>
+=======
+  <div class="bg">
+<<<<<<< HEAD
+    <!--- Start Memes Of The Week  Section -->
+    <div id="MemesOfTheWeek" class="offset">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div id="mowbg" class="col-sm-12 bg-dark text-white">
+              <h1>Memes Of The Week</h1>
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div id="memeRow1" class="col-sm-12">
+              Memes will post here
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <!--- End  Section -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--- Start Catagories Section -->
+    <div id="Catagories" class="offset">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div id="catBG" class="col-sm-8 bg-dark text-white">
+              <h1 class="catH">Catagories</h1>
+            </div>
+            <div class="col-sm-4">
+              <form>
+                <div class="dropdown bg-dark" id="cat-bg">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catagories Type
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#/api/memes/catagories/category1">Category 1</a>
+                    <a class="dropdown-item" href="#Catagories">Category 2</a>
+                    <a class="dropdown-item" href="#Catagories">Category 3</a>
+                    <a class="dropdown-item" href="#Catagories">Category 4</a>
+                    <a class="dropdown-item" href="#Catagories">Category 5</a>
+                  </div>
+                  <button id="cat-sub" type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div id="memeRow2" class="col-sm-12">
+              Memes will post here
+              <ul>
+                {{#each Memes}}
+                <li>
+                  {{MemeImg}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <!--- End Catagories Section -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+    <!--- Start All Memes Section -->
+    <div id="AllMemes" class="offset">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div id="ambg" class="col-sm-12 bg-dark text-white">
+              <h1>All Memes</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            {{#each Meme}}
+            <div id="memeRow3" class="col-sm-3">
+              <div class="card-deck">
+                <div class="card">
+                  <img src="{{imageUrl}}" class="card-img-top" alt="{{title}}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">{{category}}</p>
+                    <p class="card-text">{{about}}</p>
+                    <p class="card-text"><small class="text-muted">{{importance}}</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+
+
+        </div>
+      </div>
+      <!--- End All Memes Section -->
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+      <!--- Start Add Your Meme Section -->
+      <div id="AddYourMeme" class="offset">
+        <div class="container">
+          <div id="form-buffer" class="bg-dark">
+
+            <h1 class="bg-dark text-white form1">Add Your Meme</h1>
+            <form class="bg-dark form2">
+              <div class="form-group text-white">
+                <label for="FormControlInput1">Meme Name</label>
+                <input type="text" class="form-control" id="FormName">
+              </div>
+              <div class="form-group text-white">
+                <label for="FormControlInput1">Meme URL</label>
+                <input type="text" class="form-control" id="FormURL">
+              </div>
+              <div class="form-group text-white">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea class="form-control" id="FormDesc" rows="3"></textarea>
+              </div>
+              <div class="form-group text-white">
+                <label for="FormControlSelect1">Catagory</label>
+                <select class="form-control" id="FormCategory">
+                  <option>Political</option>
+                  <option>Dank</option>
+                  <option>Dank Christian</option>
+                  <option>Animal</option>
+                  <option>Facebook</option>
+                </select>
+                <div class="col-auto">
+                  <br>
+                  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--- End Add Your Meme  Section -->
+
+
+
+    </div>
+</body>
+
+
+{{!-- 
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>{{msg}}</h1>
+        <h2>This is our Home Page!</h2>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">Example Text</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          </div>
+          <div class="form-group">
+            <label for="example-description">Example Description</label>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+        <h3>Examples:</h3>
+        <ul id="example-list" class="list-group"> --}}
+{{!-- {{#each examples}} --}}
+{{!-- <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li> --}}
+{{!-- {{/each}} --}}
+{{!-- </ul>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+
+=======
+    </div>
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+>>>>>>> master
+>>>>>>> jsbranch
