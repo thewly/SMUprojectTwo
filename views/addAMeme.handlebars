@@ -1,28 +1,28 @@
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-      <a class="navbar-brand text-white" href="/">Meme Database</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active ">
-            <a class="nav-link text-white " href="/views/popularMemes.handlebars">Popular Memes</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="/views/catergories.handlebars">Catagories</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+    <a class="navbar-brand text-white" href="/">Meme Database</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active ">
+          <a class="nav-link text-white " href="/popularMemes">Popular Memes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/allMemes.handlebars">All Memes</a>
+          <a class="nav-link text-white " href="/categories">Categories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/addAMeme.handlebars">Add A Meme</a>
+          <a class="nav-link text-white " href="/allMemes">All Memes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/team.handlebars">Team</a>
+          <a class="nav-link text-white " href="/addAMeme">Add A Meme</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="/team">Team</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -36,51 +36,52 @@
   </nav>
   <br><br><br><br>
 
+  <div id="AddYourMeme" class="container">
+    <div id="form-buffer" class="bg-dark">
+
+      <h1 class="bg-dark text-white form1">Add Your Meme</h1>
+      <form class="bg-dark form2">
+        <div class="form-group text-white">
+          <label for="FormControlInput1">Meme Name</label>
+          <input type="text" class="form-control" id="FormName">
+        </div>
+        <div class="form-group text-white">
+          <label for="FormControlInput1">Meme URL</label>
+          <input type="text" class="form-control" id="FormURL">
+        </div>
+        <div class="form-group text-white">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea class="form-control" id="FormDesc" rows="3"></textarea>
+        </div>
+        <div class="form-group text-white">
+          <label for="FormControlSelect1">Catagory</label>
+          <select class="form-control" id="FormCategory">
+            <option>Political</option>
+            <option>Dank</option>
+            <option>Dank Christian</option>
+            <option>Animal</option>
+            <option>Facebook</option>
+          </select>
+          <div class="col-auto">
+            <br>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          </div>
+
+
+      </form>
+    </div>
+  </div>
+  </div>
+  </div>
+  </header>
+
+  </div>
+  <div class="bg">
+  </div>
+
 
 
 
 
 
 </body>
-<div class="container">
-          <div id="form-buffer" class="bg-dark">
-
-          <h1 class="bg-dark text-white form1">Add Your Meme</h1>
-          <form class="bg-dark form2">
-            <div class="form-group text-white">
-              <label for="FormControlInput1">Meme Name</label>
-              <input type="text" class="form-control" id="FormName">
-            </div>
-            <div class="form-group text-white">
-              <label for="FormControlInput1">Meme URL</label>
-              <input type="text" class="form-control" id="FormURL">
-            </div>
-            <div class="form-group text-white">
-              <label for="exampleFormControlTextarea1">Description</label>
-              <textarea class="form-control" id="FormDesc" rows="3"></textarea>
-            </div>
-            <div class="form-group text-white">
-              <label for="FormControlSelect1">Catagory</label>
-              <select class="form-control" id="FormCategory">
-                <option>Political</option>
-                <option>Dank</option>
-                <option>Dank Christian</option>
-                <option>Animal</option>
-                <option>Facebook</option>
-              </select>
-              <div class="col-auto">
-                <br>
-                <button type="submit" class="btn btn-primary mb-2">Submit</button>
-              </div>
-
-
-            </form>
-          </div>
-        </div>
-      </div>
-      </div>
-    </header>
-
-  </div>
-  <div class="bg">
-    </div>

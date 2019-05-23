@@ -10,19 +10,19 @@
       <div class="collapse navbar-collapse " id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active ">
-            <a class="nav-link text-white " href="/views/popularMemes.handlebars">Popular Memes</a>
+            <a class="nav-link text-white " href="/popularMemes">Popular Memes</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/catergories.handlebars">Catagories</a>
+          <a class="nav-link text-white " href="/categories">Categories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/allMemes.handlebars">All Memes</a>
+          <a class="nav-link text-white " href="/allMemes">All Memes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/addAMeme.handlebars">Add A Meme</a>
+          <a class="nav-link text-white " href="/addAMeme">Add A Meme</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/views/team.handlebars">Team</a>
+          <a class="nav-link text-white " href="/team">Team</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -36,196 +36,18 @@
   </nav>
   <br><br><br><br>
 
-
-
-
-
-
   <!--- Start Memes Of The Week  Section -->
   <div id="MemeDatabase" class="offset">
     <header class="header">
-
-
       <div class="header__text-box">
         <h1 class="heading-primary">
           <span class="heading-primary--main">Meme Database</span>
           <span class="heading-primary--sub">a full meme resource</span>
         </h1>
-
-
       </div>
     </header>
-
   </div>
-  <div class="bg">
-<<<<<<< HEAD
-    <!--- Start Memes Of The Week  Section -->
-    <div id="MemesOfTheWeek" class="offset">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            <div id="mowbg" class="col-sm-12 bg-dark text-white">
-              <h1>Memes Of The Week</h1>
-            </div>
-            <div class="col-sm-4">
 
-            </div>
-            <div class="col-sm-4">
+  <div class="bg"></div>
 
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div id="memeRow1" class="col-sm-12">
-              Memes will post here
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-    <!--- End  Section -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--- Start Catagories Section -->
-    <div id="Catagories" class="offset">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            <div id="catBG" class="col-sm-8 bg-dark text-white">
-              <h1 class="catH">Catagories</h1>
-            </div>
-            <div class="col-sm-4">
-              <div class="dropdown bg-dark" id="cat-bg">
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col">
-                      <select class="form-control" id="categorySelect">
-                        <option value="Political">Political</option>
-                        <option value="Dank">Dank</option>
-                        <option value="Dank Christian">Dank Christian</option>
-                        <option value="Animal">Animal</option>
-                        <option value="Facebook">Facebook</option>
-                      </select>
-                    </div>
-                    <div class="col">
-                      <button id="FormCategory" type="submit" class="btn btn-primary mb-2">Submit</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div id="memeRow2" class="col-sm-12">
-              Memes will post here
-              <ul>
-                {{#each Memes}}
-                <li>
-                  {{MemeImg}}
-                </li>
-                {{/each}}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--- End Catagories Section -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <!--- Start All Memes Section -->
-    <div id="AllMemes" class="offset">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            <div id="ambg" class="col-sm-12 bg-dark text-white">
-              <h1>All Memes</h1>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            {{#each Meme}}
-              {{> memes/meme-block}}
-            {{/each}}
-          </div>
-
-
-        </div>
-      </div>
-      <!--- End All Memes Section -->
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-      <!--- Start Add Your Meme Section -->
-      <div id="AddYourMeme" class="offset">
-        <div class="container">
-          <div id="form-buffer" class="bg-dark">
-
-            <h1 class="bg-dark text-white form1">Add Your Meme</h1>
-            <form class="bg-dark form2">
-              <div class="form-group text-white">
-                <label for="FormControlInput1">Meme Name</label>
-                <input type="text" class="form-control" id="FormName">
-              </div>
-              <div class="form-group text-white">
-                <label for="FormControlInput1">Meme URL</label>
-                <input type="text" class="form-control" id="FormURL">
-              </div>
-              <div class="form-group text-white">
-                <label for="exampleFormControlTextarea1">Description</label>
-                <textarea class="form-control" id="FormDesc" rows="3"></textarea>
-              </div>
-              <div class="form-group text-white">
-                <label for="FormControlSelect1">Catagory</label>
-                <select class="form-control" id="FormCategory">
-                  <option>Political</option>
-                  <option>Dank</option>
-                  <option>Dank Christian</option>
-                  <option>Animal</option>
-                  <option>Facebook</option>
-                </select>
-                <div class="col-auto">
-                  <br>
-                  <button type="submit" class="btn btn-primary mb-2">Submit</button>
-                </div>
-
-
-            </form>
-          </div>
-        </div>
-      </div>
-      <!--- End Add Your Meme  Section -->
-
-
-
-=======
->>>>>>> de80afaf38b70b5cd022e6271d68e8e0e8743e8d
-    </div>
 </body>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
