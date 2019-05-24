@@ -66,11 +66,19 @@
 
 /* background fix */
 
-#cat-bg, #mowbg, #ambg, #catBG {
+#cat-bg,  #ambg  {
   background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/04/1black_wood_-grain-texture_11-1024x647.jpg);
   padding: 9px;
 }
 
+#mowbg {
+  
+  padding: 9px;
+}
+#catBG {
+  
+  padding: 9px;
+}
 #cat-bg {
   padding-bottom: 15px;
 }
@@ -158,6 +166,35 @@ body {
   background-image: url(https://wallpapertag.com/wallpaper/full/7/2/8/118913-full-size-white-wood-background-1920x1080.jpg);
 }
 
+.body2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+.body3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-image: url("https://images.pexels.com/photos/1342460/pexels-photo-1342460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+.body4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-image: url("https://images.pexels.com/photos/2128042/pexels-photo-2128042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
@@ -171,7 +208,7 @@ body {
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-timing-function: ease-in;
   /*
         animation-delay: 3s;
@@ -184,7 +221,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out;
+  animation: moveInRight .5s ease-out;
 }
 
 .heading-secondary {

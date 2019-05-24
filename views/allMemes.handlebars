@@ -40,21 +40,66 @@
 
   <br><br><br><br>
 
-  <div class="container-fluid">
+  {{!-- <div class="container-fluid">
     <div class="container">
       <div class="row">
         <div id="ambg" class="col-sm-12 bg-dark text-white">
           <h1>All Memes</h1>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
+  </div>
+          <div class="row">
+          <div class="col-1">
+
+          </div>
+      <div class="col-10 text-center">        
         {{#each Meme}}
         {{> memes/meme-block}}
-        {{/each}}
+        {{/each}}        
       </div>
-    </div>
-  </div>
+      <div class="col-1">
+
+          </div>
+      </div>
+      </div>      
+      </div> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="container-fluid">
+            <div class="row">
+          <div class="col-sm-4">
+            
+          </div>
+          <div id="ambg" class="col-sm-4 bg-dark text-white">
+               <h1>All Memes</h1>
+            </div>
+          <div class="col-sm-4">
+                                    
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row  memeColumn">              
+                <div class=" col-12 text-center">        
+        {{#each Meme}}
+        {{> memes/meme-block}}
+        {{/each}}        
+      </div>      
+      </div>
+      </div>
+      
+      
+   
+    
 
 </body>

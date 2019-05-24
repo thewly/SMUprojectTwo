@@ -55,21 +55,9 @@
           </div>
         </div>
         <div class="container">
-          <div class="row">
+          <div class="row text-center">
             {{#each searchResults}}
-            <div id="memeRow3" class="col-sm-3">
-              <div class="card-deck">
-                <div class="card">
-                  <img src="{{this.imageUrl}}" class="card-img-top" alt="{{this.title}}">
-                  <div class="card-body">
-                    <h5 class="card-title">{{this.title}}</h5>
-                    <p class="card-text">{{this.category}}</p>
-                    <p class="card-text">{{this.about}}</p>
-                    <p class="card-text"><small class="text-muted">{{this.importance}}</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {{> memes/meme-block}}
             {{/each}}
           </div>
 
