@@ -458,3 +458,7 @@ ul.member-social-links li i.fa-github
 /* This media querie will alter the website for screens 640px and below. */
 
 @media screen and (max-width: 640px) {}
+
+a:hover{
+  background-color:#007bff;  
+}
