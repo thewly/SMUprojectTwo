@@ -55,6 +55,7 @@
   background-position: center;
 }
 
+
 /*--- Nav Scrolling Offset --*/
 
 .offset:before {
@@ -295,6 +296,20 @@ hr {
 
 .card {
   background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/04/1black_wood_-grain-texture_11-1024x647.jpg);
+}
+
+.innerS {
+  margin: 30px;
+  font-size: 20px;
+}
+
+.ADS {
+  background-image: url(../images/AD.jpeg);
+  position: fixed;
+  top: 0;
+  width: 30%;
+  height: 80%;
+  background-repeat: no-repeat;
 }
 
 .team .inner-content
