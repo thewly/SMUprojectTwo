@@ -1,40 +1,40 @@
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-      <a class="navbar-brand text-white" href="/">Meme Database</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active ">
-            <a class="nav-link text-white " href="/views/popularMemes.handlebars">Popular Memes</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="/views/catergories.handlebars">Catagories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="/views/allMemes.handlebars">All Memes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="/views/addAMeme.handlebars">Add A Meme</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="/views/team.handlebars">Team</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary mb-2 my-sm-0" type="submit">Search</button>
-      </form>
-      {{!-- <span class="navbar-text bg-dark text-white ">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+		<a class="navbar-brand text-white" href="/">Meme Database</a>
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
+			aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icon-bar top-bar"></span>
+			<span class="icon-bar middle-bar"></span>
+			<span class="icon-bar bottom-bar"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active ">
+					<a class="nav-link text-white " href="/views/popularMemes.handlebars">Popular Memes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white " href="/views/catergories.handlebars">Catagories</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white " href="/views/allMemes.handlebars">All Memes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white " href="/views/addAMeme.handlebars">Add A Meme</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white " href="/views/team.handlebars">Team</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-primary mb-2 my-sm-0" type="submit">Search</button>
+			</form>
+			{{!-- <span class="navbar-text bg-dark text-white ">
           A Complete Meme Experience
         </span> --}}
-    </div>
-  </nav>
-  <br><br><br><br>
+		</div>
+	</nav>
+	<br><br><br><br>
 
 
 
@@ -42,92 +42,203 @@
 
 
 
-    <section class="team section-padding" id="team">
+	<section class="team section-padding" id="team">
 		<div class="animation" data-animation="fadeIn">
 			<div class="team-header">
 				<h1>Our Team</h1>
-				
+
 			</div>
 		</div>
 
 		<div class="container-fluid">
-			<div class="row-12">
+			<div class="row">
 				<div class="animation" data-animation="zoomIn">
-					        <li>
-							<div class="inner-content">
-								<img src="https://media.licdn.com/dms/image/C5603AQGTzwehh-49ow/profile-displayphoto-shrink_200_200/0?e=1564012800&v=beta&t=x03WvclLmwrqrKJWfGGHuw4E0l1ifEZDtjbCcZ6O1d4">
-								<div class="overlay-content white">
-									<p>Joshua Branson</p>
-									<p>Front-End</p>
-									    <ul class="member-social-links">
-                      <li><a href="#"><i class="far fa-file"></i></a></li>
-											<li><a href="https://www.linkedin.com/in/j91branson/"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
-											<li><a href="https://github.com/J91Branson"  target="_blank"><i class="fab fa-github"></i></a></li>
-									</ul>
-								</div>
+					<li>
+						<div class="col-12 inner-content">
+							<img
+								src="https://media.licdn.com/dms/image/C5603AQGTzwehh-49ow/profile-displayphoto-shrink_200_200/0?e=1564012800&v=beta&t=x03WvclLmwrqrKJWfGGHuw4E0l1ifEZDtjbCcZ6O1d4">
+							{{!-- Overlay-Content --}}
+							<div class="overlay-content white">
+								<p>Joshua Branson</p>
+								<p>Front-End</p>
+								<ul class="member-social-links">
+									<li><a href="#"><i class="far fa-file"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/j91branson/" target="_blank"><i
+												class="fab fa-linkedin"></i></a></li>
+									<li><a href="https://github.com/J91Branson" target="_blank"><i class="fab fa-github"></i></a></li>
+								</ul>
 							</div>
-						</li><li>
-							<div class="inner-content">
-								<img src="https://media.licdn.com/dms/image/C4E03AQFX2sVzVCuXGA/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=6Dk1PNp9_8jCFC0sJrv8bfL1uY9NOaB9Rb221AKPCFw">
-								<div class="overlay-content white">
-									<p class="name primary bold">Caitlyn Sifuentes</p>
-									<p class="position secondary-sky-blue bold">Front End</p>
-									    <ul class="member-social-links">
-										<li><a href="#"><i class="far fa-file"></i></a></li>
-										<li><a href="https://www.linkedin.com/in/caitlyn-sifuentes/"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
-										<li><a href="https://github.com/CaitlynSifuentes"  target="_blank"><i class="fab fa-github"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</li><li>
-							<div class="inner-content">
-								<img src="https://media.licdn.com/dms/image/C5603AQEDtk_jxj21xw/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=K1YTR1ZDK--1eNtJ2j1sldtj_ijvbuccOnz8hVuaR1A">
-								<div class="overlay-content white">
-									<p class="name primary bold">Matthew Cole</p>
-									<p class="position secondary-sky-blue bold">Back End</p>
-									    <ul class="member-social-links">
-										<li><a href="#"><i class="far fa-file"></i></a></li>
-										<li><a href="https://www.linkedin.com/in/matthewgcole/"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
-										<li><a href="https://github.com/thewly"  target="_blank"><i class="fab fa-github"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</li><li>
-							<div class="inner-content">
-								<img src="https://media.licdn.com/dms/image/C5603AQF5_gJPXhyJmQ/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=bm9H_sOnpkUBjlCofOsZmkXo-MevaBC1aJeAdViy6yQ">
-								<div class="overlay-content white">
-									<p class="name primary bold">Jackson Stein</p>
-									<p class="position secondary-sky-blue bold">Back End</p>
-									    <ul class="member-social-links">
-										<li><a href="#"><i class="far fa-file"></i></a></li>
-										<li><a href="https://www.linkedin.com/in/jackson-stein/"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
-										<li><a href="https://github.com/jsstein1995"  target="_blank"><i class="fab fa-github"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</li><li>
-							<div class="inner-content">
-								<img src="https://media.licdn.com/dms/image/C4E03AQGVyyGjYCWZKQ/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=2TFjFiv0BIqTmOmJ-9y5AY9W4wUbV8phBp3D2nvAeIM">
-								<div class="overlay-content white">
-									<p class="name primary bold">G. Sean Massingill</p>
-									<p class="position secondary-sky-blue bold">Back End</p>
-									<ul class="member-social-links">
-										<li><a href="#"><i class="far fa-file"></i></a></li>
-										<li><a href="https://www.linkedin.com/in/g-sean-massingill-19613176/"  target="_blank"><i class="fab fa-linkedin"></i></a></li>
-										<li><a href="https://github.com/historybro"  target="_blank"><i class="fab fa-github"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-				  </div>
+						</div>
+					</li>
+				</div>
+				<div class="col-12 hide">
+					<br>
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Joshua Branson - Front End</h5>
+							<hr>
+							<p class="big-links">
+								<a href="#"><i class="far fa-file"></i></a>
+							<a href="https://www.linkedin.com/in/j91branson/" target="_blank"><i
+											class="fab fa-linkedin"></i></a>
+							<a href="https://github.com/J91Branson" target="_blank"><i class="fab fa-github"></i></a>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
+			<div class="row">
+				<div class="animation" data-animation="zoomIn">
+					<li>
+						<div class="col-12 inner-content">
+							<img
+								src="https://media.licdn.com/dms/image/C4E03AQFX2sVzVCuXGA/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=6Dk1PNp9_8jCFC0sJrv8bfL1uY9NOaB9Rb221AKPCFw">
+							{{!-- Overlay-Content --}}
+							<div class="overlay-content white">
+								<p class="name primary bold">Caitlyn Sifuentes</p>
+								<p class="position secondary-sky-blue bold">Front End</p>
+								<ul class="member-social-links">
+									<li><a href="#"><i class="far fa-file"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/caitlyn-sifuentes/" target="_blank"><i
+												class="fab fa-linkedin"></i></a></li>
+									<li><a href="https://github.com/CaitlynSifuentes" target="_blank"><i class="fab fa-github"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="col-12 hide">
+					<br>
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Cailtyn Sifuentes - Front End</h5>
+							<hr>
+							<p class="card-text big-links">								
+									<a href="#"><i class="far fa-file"></i></a>
+									<a href="https://www.linkedin.com/in/caitlyn-sifuentes/" target="_blank"><i
+												class="fab fa-linkedin"></i></a>
+									<a href="https://github.com/CaitlynSifuentes" target="_blank"><i class="fab fa-github"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="animation" data-animation="zoomIn">
+					<li>
+						<div class="col-12 inner-content">
+							<img
+								src="https://media.licdn.com/dms/image/C5603AQEDtk_jxj21xw/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=K1YTR1ZDK--1eNtJ2j1sldtj_ijvbuccOnz8hVuaR1A">
+							{{!-- Overlay-Content --}}
+							<div class="overlay-content white">
+								<p class="name primary bold">Matthew Cole</p>
+								<p class="position secondary-sky-blue bold">Back End</p>
+								<ul class="member-social-links">
+									<li><a href="#"><i class="far fa-file"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/matthewgcole/" target="_blank"><i
+												class="fab fa-linkedin"></i></a></li>
+									<li><a href="https://github.com/thewly" target="_blank"><i class="fab fa-github"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="col-12 hide">
+					<br>
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Matthew Cole - Back End</h5>
+							<hr>
+							<p class="card-text big-links">
+									<a href="#"><i class="far fa-file"></i></a>
+									<a href="https://www.linkedin.com/in/matthewgcole/" target="_blank"><i
+												class="fab fa-linkedin"></i></a>
+									<a href="https://github.com/thewly" target="_blank"><i class="fab fa-github"></i></a>
+								</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="animation" data-animation="zoomIn">
+					<li>
+						<div class="col-12 inner-content">
+							<img
+								src="https://media.licdn.com/dms/image/C5603AQF5_gJPXhyJmQ/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=bm9H_sOnpkUBjlCofOsZmkXo-MevaBC1aJeAdViy6yQ">
+							{{!-- Overlay-Content --}}
+							<div class="overlay-content white">
+								<p class="name primary bold">Jackson Stein</p>
+								<p class="position secondary-sky-blue bold">Back End</p>
+								<ul class="member-social-links">
+									<li><a href="#"><i class="far fa-file"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/jackson-stein/" target="_blank"><i
+												class="fab fa-linkedin"></i></a></li>
+									<li><a href="https://github.com/jsstein1995" target="_blank"><i class="fab fa-github"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="col-12 hide">
+					<br>
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Jackson Stein - Back End</h5>
+							<hr>
+							<p class="card-text big-links">
+									<a href="#"><i class="far fa-file"></i></a>
+									<a href="https://www.linkedin.com/in/jackson-stein/" target="_blank"><i
+												class="fab fa-linkedin"></i></a>
+									<a href="https://github.com/jsstein1995" target="_blank"><i class="fab fa-github"></i></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="animation" data-animation="zoomIn">
+					<li>
+						<div class="col-12 inner-content">
+							<img
+								src="https://media.licdn.com/dms/image/C4E03AQGVyyGjYCWZKQ/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=2TFjFiv0BIqTmOmJ-9y5AY9W4wUbV8phBp3D2nvAeIM">
+							{{!-- Overlay-Content --}}
+							<div class="overlay-content white">
+								<p class="name primary bold">G. Sean Massingill</p>
+								<p class="position secondary-sky-blue bold">Back End</p>
+								<ul class="member-social-links">
+									<li><a href="#"><i class="far fa-file"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/g-sean-massingill-19613176/" target="_blank"><i
+												class="fab fa-linkedin"></i></a></li>
+									<li><a href="https://github.com/historybro" target="_blank"><i class="fab fa-github"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="col-12 hide">
+					<br>
+					<div class="card">
+						<div class="card-body big-links">
+							<h5 class="card-title">G. Sean Massingill - Back End</h5>
+							<hr>
+							<p class="card-text big-links">								
+									<a href="#"><i class="far fa-file"></i></a>
+								<a href="https://www.linkedin.com/in/g-sean-massingill-19613176/" target="_blank"><i
+												class="fab fa-linkedin"></i></a>
+									<a href="https://github.com/historybro" target="_blank"><i class="fab fa-github"></i></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		</div>
 
 	</section>
-      </div>
-    </header>
+	</div>
+	</header>
 
-  </div>
-  <div class="bg">
-    </div>
+	</div>
+	<div class="bg">
+	</div>
 </body>
