@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password":"password",
-    "database": "Project2DB",
+    "database": "meme_db",
     "host": "localhost",
     "dialect": "mysql"
   },
