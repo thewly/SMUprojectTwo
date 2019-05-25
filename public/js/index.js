@@ -1,11 +1,31 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $("#AddYourMeme").on("submit", handleMemeSubmit);
   $(".like").on("click", handleMemeLike);
   $(".save").on("click", handleMemeSave);
   $(".delete").on("click", handleMemeDelete);
+  $("#FormCategory").on("click", handleMemeSearch);
+  $("#search-btn").on("click", function (event) {
+    event.preventDefault();
+    console.log("button-test");
+    var memeSearched = $("#meme-search").val().trim();
+    var postData = {
+      memeSearched: memeSearched
+    };
+    //Make an AJAX get request to our api
+    $.get("/api/memes/search/" + memeSearched, function() {
+      console.log("posting?");
+    }).then(function(data) {
+      console.log(JSON.stringify(data));
+      //don't need reload
+      // location.reload();
+      window.location = "/api/memes/search/" + memeSearched;
+    });
+  });
 });
 
 //the functions that make everything above work live here
+
+//Submit a new meme
 
 function handleMemeSubmit(event) {
   console.log("Meme submitted!");
@@ -99,14 +119,13 @@ function handleMemeSave() {
   console.log("Meme Saved!");
 }
 
-$("#FormCategory").on("click", function(event){
+//
+
+function handleMemeSearch(event) {
   event.preventDefault();
   var whatCat = $("#categorySelect").val();
-
-  $.get("/api/memes/categories/" + whatCat, function(data) {
-    // document.write(data);
-    console.log(data);
-  });
-});
+  console.log("\nWhatCat?: " + whatCat);
+  window.location.href = "/categories/" + whatCat;
+}
 
 //TEST AREA

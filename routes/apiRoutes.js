@@ -1,6 +1,23 @@
 var db = require("../models");
 
 module.exports = function(app) {
+  app.get("/", function(req, res) {
+    db.Meme.findAll({}).then(function(dbMeme) {
+      res.render("index", {
+        Meme: dbMeme
+      });
+    });
+  });
+
+  // Load example page and pass in an example by id
+  // app.get("/example/:id", function(req, res) {
+  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.render("example", {
+  //       example: dbExample
+  //     });
+  //   });
+  // });
+
   // Get all examples
   app.get("/api/memes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMemes) {
@@ -9,9 +26,24 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/memes/search/:memeSearched", function(req, res) {
+    console.log(req.params.memeSearched);
+    db.Meme.findAll({
+      where: {
+        title: req.params.memeSearched
+      }
+    }).then(function(results) {
+      console.log("working?" + results);
+      var hbsObject = {
+        searchResults: results
+      };
+      res.render("searchResults", hbsObject);
+    });
+  });
+
   // Get memes by category
   app.get("/api/memes/categories/:category", function(req, res) {
-    db.Meme.findOne({
+    db.Meme.findAll({
       where: {
         category: req.params.category
       }
@@ -72,5 +104,9 @@ module.exports = function(app) {
     }).then(function() {
       res.redirect("/");
     });
+  });
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.render("404");
   });
 };
