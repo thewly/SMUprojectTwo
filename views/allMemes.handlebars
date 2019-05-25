@@ -29,13 +29,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="/searchResults">Search</a>
-        </li>        
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" id="meme-search" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-primary mb-2 my-sm-0" type="submit" id="search-btn">Search</button>
       </form>
-       </div>
+    </div>
   </nav>
 
   <br><br><br><br>
@@ -75,31 +75,37 @@
 
 
 
-      <div class="container-fluid">
-            <div class="row">
-          <div class="col-sm-4">
-            
-          </div>
-          <div id="ambg" class="col-sm-4 bg-dark text-white">
-               <h1>All Memes</h1>
-            </div>
-          <div class="col-sm-4">
-                                    
-          </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+
       </div>
-      <div class="container-fluid">
-        <div class="row  memeColumn">              
-                <div class=" col-12 text-center">        
+      <div id="ambg" class="col-sm-4 bg-dark text-white">
+        <h1>All Memes</h1>
+      </div>
+      <div class="col-sm-4">
+
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 ">
+
+      </div>
+      <div class=" col-sm-6 text-center">
         {{#each Meme}}
         {{> memes/meme-block}}
-        {{/each}}        
-      </div>      
+        {{/each}}
       </div>
+      <div class="col-sm-3 ADS">
+
       </div>
-      
-      
-   
-    
+    </div>
+  </div>
+
+
+
+
 
 </body>

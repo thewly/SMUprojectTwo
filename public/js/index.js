@@ -3,7 +3,7 @@ $(document).ready(function() {
   $(".like").on("click", handleMemeLike);
   $(".save").on("click", handleMemeSave);
   $(".delete").on("click", handleMemeDelete);
-  $("#FormCategory").on("click", handleMemeSearch);
+  $("#FormCategory1").on("click", handleMemeSearch);
   $("#search-btn").on("click", function (event) {
     event.preventDefault();
     console.log("button-test");
