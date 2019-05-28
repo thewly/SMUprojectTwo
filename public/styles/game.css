@@ -1,0 +1,347 @@
+@font-face {
+	font-family: Komtit; 
+	src: url(fonts/KOMTIT.ttf);
+}
+
+@font-face {
+	font-family: Lato;
+	src: url(fonts/Lato.ttf);
+}
+
+/* -- General styles -- */
+
+body {
+	background-color: #30415D; 
+	color: #fff;
+	font-family: Lato, sans-serif; 
+	letter-spacing: .1em;
+	margin: 0;
+	overflow-x: hidden;
+	text-align: center;
+}
+
+button {
+	border: 0;
+	box-shadow: 3px 3px 3px #222;
+	color: #222; 
+	cursor: pointer;
+	font-family: Lato;
+	font-size: 25px; 
+	margin: 10px auto;
+	padding: 10px 0;
+	width: 170px; 
+}
+
+button:hover {
+	background-color: #ccc;
+}
+
+h1 {
+	font-size: 100px; 
+	font-family: Komtit; 
+	font-weight: bolder;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 40px; 
+	font-family: Komtit; 
+	margin: 0;
+	padding: 0; 
+}
+
+img {
+	border-radius: 10px; 
+	box-shadow: 3px 3px 3px #222;
+	width: 100%;
+}
+
+footer {
+	color: #e8e8e8;
+	margin-top: 50px;
+	padding: 10px 0;
+	width: 100%;
+}
+
+#jumbotron {
+	background-color: #CF6766;
+	padding: 20px 0 40px; 
+}
+
+#jumbotron h3 {
+	-vendor-animation-delay: 2s;
+}
+
+#header {
+	background-color: #CF6766;
+	padding: 5px 20px 10px;
+	max-width: 100%;
+	overflow: hidden;
+	text-align: left;
+	width: 100%;
+}
+
+#boardwrap {
+	margin: auto; 
+	padding: 30px 0;
+	width: 90%;
+}
+
+#howTo div {
+	display: inline-block;
+	font-size: 20px;
+	margin: 40px 20px; 
+	max-width: 500px; 
+	text-align: justify; 
+	vertical-align: top; 
+	width: 80%; 
+}
+
+#desktop {
+	margin-top: 100px;
+}
+
+#playButton {
+	margin-top: 20px;
+	width: 150px;
+}
+
+#warAnimation {
+	display: none;
+	font-family: Komtit;
+	font-size: 20vw;
+	height: 60vh;
+	left: 0;    
+	overflow: hidden;
+	position: fixed; 
+	top: 10vh;
+	width: 100vw;
+	z-index: 1000;
+}
+
+#warText {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#warArea {
+	background: rgba(0,0,0,0.7);
+	height: 60vh;
+	left: 0;
+	line-height: 60vh;
+	position: fixed;
+	top: 10vh;
+	width: 100vw;
+	z-index: 900;
+}
+
+#warArea div {
+	display: inline-block;
+	margin: 0 20px;
+	max-width: 200px;
+	width: 20%;
+	vertical-align: middle;
+}
+
+.war {
+	animation: war 2s infinite;
+}
+
+.playerWarCards, .compWarCards {
+	position: relative;
+	top: -142px;
+}
+
+.playerWarCards img, .compWarCards img {
+	display: inline-block;
+	position: absolute;
+}
+
+.playerWarCards img:first-child, .compWarCards img:first-child {
+	left: 0;
+}
+
+.playerWarCards img:nth-child(2) {
+	left: -10px;
+	z-index: 901;
+}
+
+.playerWarCards img:nth-child(3) {
+	left: -20px;
+	z-index: 902;
+}
+
+.compWarCards img:nth-child(2) {
+	left: 10px;
+	z-index: 901;
+}
+
+.compWarCards img:nth-child(3) {
+	left: 20px;
+	z-index: 902;
+}
+
+/* -- pulsing color animation -- */
+
+@keyframes war {
+	0%, 20%, 40%, 60%, 80%, 100% {
+		background-color: #f4ee42; 
+	} 
+	10%, 30%, 50%, 70%, 90% {
+		background-color: #CF6766;
+	}
+}
+
+#mobile {
+	display: none;
+}
+
+#mobile div {
+	display: inline-block; 
+	margin: 10px 12px;
+	vertical-align: middle; 
+	width: 30%; 
+}
+
+#mobile div.playCount, #mobile div.compCount, #mobile div.result {
+	width: 70%;
+}
+
+#mobile .deal, #mobile .newGame { 
+	font-size: 18px;
+	height: 50px;
+	width: 150px;
+}
+
+#mobile div.result {
+	font-size: 15px; 
+	margin: 5px;
+}
+
+.gameHeader {
+	margin: auto;
+	padding: 20px 0;
+	width: 85%;
+}
+
+.gameHeader div {
+	display: inline-block; 
+	vertical-align: middle;
+}
+
+.playCount, .compCount { 
+	font-size: 20px; 
+	font-weight: bolder;
+	margin: auto;
+	width: 20%;
+}
+
+.result {
+	font-size: 25px; 
+	font-weight: bolder;
+	margin: auto; 
+	width: 40%;
+}
+
+.gameTable div {
+	display: inline-block; 
+	max-width: 35%; 
+	margin: 0 20px;
+	vertical-align: middle;
+	width: 200px;
+}
+
+/* -- Mobile Responsiveness -- */
+
+@media screen and (max-width: 1352px) {
+
+	.gameTable div {
+		margin: 0 10px;
+		width: 15%;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+
+	button {
+		font-size: 20px;
+		width: 100%;
+	}
+
+	.playerArea, .compArea {
+		width: 90% !important;
+	}
+
+	.playCount, .compCount {
+		font-size: 20px;
+		width: 29%;
+	}
+
+	footer {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	#desktop {
+		display: none;
+	}
+	#mobile {
+		display: block;
+	}
+	
+	#howTo div {
+		margin-bottom: 20px;
+	}
+
+	#warAnimation {
+		font-size: 15vw;
+		top: 20vh;
+		z-index: 1000;
+	}
+
+	#warArea div {
+		width: 15%;
+	}
+
+	.playerWarCards, .compWarCards {
+		top: -83px;
+	}
+
+	div.middleGround {
+		width: 90% !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+	#warArea {
+		line-height: 30vh;
+	}
+
+	#warArea div {
+		width: 30%;
+	}
+
+	.playerWarCards, .compWarCards {
+		top: -90px;
+	}
+}
+
+@media screen and (max-width: 376px) {
+	.playerWarCards, .compWarCards {
+		top: -81px;
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.playerWarCards, .compWarCards {
+		top: -68px;
+	}
+}

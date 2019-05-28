@@ -40,17 +40,86 @@
   <br><br><br><br>
 
 
-
-
-
-
-
-
 <div class="container-fluid">
         <div class="container">
           <div class="row">
             <div id="ambg" class="col-sm-12 bg-dark text-white">
-              <h1>Meme War</h1>
+              <div class='jumbotron' id='jumbotron'>
+			<h1 class='animated flipInX'>WAR!</h1>
+			<h3 class='animated lightSpeedIn'>Classic. Deadly.</h3>
+		</div><!-- end jumbotron div -->
+
+		<div id='header' style="display: none;">
+			<h3>WAR!</h3>
+		</div><!-- end header -->
+
+		<div id="boardwrap">
+
+			<div id='howToPlay'>
+				<h2><u>How To Play</u></h2>
+
+				<div id="howTo">
+					<div>The game is simple. Draw one card and compare it against the computer's. Highest card wins, and winner takes both cards. Play until one person has all of the cards.</div>
+					<div>In the event of a tie, <u>THERE WILL BE WAR.</u> Three cards will be drawn from each deck (if available) and the fourth card from each will be compared. Highest card wins. Winner takes all 8 cards.</div>
+				</div><!-- End howTo div -->
+
+				<div><button id='playButton' onclick="play()">PLAY!</button></div>
+			</div><!-- End howToPlay div -->
+
+			<div id="warAnimation" class="war"><div id="warText">WAR!!!</div></div>
+
+			<div id="warArea" style='display: none;'>
+				<div class='playerWarFinal'></div>
+				<div class='playerWarCards'></div>
+				<div class='compWarCards'></div>
+				<div class='compWarFinal'></div>
+			</div><!-- End warArea div -->
+			
+			<div id='gameboard'>
+				<div id='desktop' class="game animated fadeInUp">
+					
+					<div class="gameHeader">
+						<div class="playCount"></div>
+						<div class="result"></div>
+						<div class="compCount"></div>
+					</div><!--End gameHeader div -->
+					
+					<div class="gameTable">
+						<div class="playerDeck"><img src="img/cardback.jpg"></div>
+						<div class="playerCard"></div>
+						<div class="middleGround">
+							<button class="deal" onclick="deal()">DEAL</button><br>
+							<button class="newGame" onclick="location.reload()">NEW GAME</button>
+						</div><!-- End middleGround div -->
+						<div class="compCard"></div>
+						<div class="compDeck"><img src="img/cardback.jpg"></div>
+					</div><!-- End gameTable div -->
+				</div><!-- End desktop div -->
+
+				<div id='mobile' class="game animated fadeInLeft">
+					<div class="playCount"></div><br>
+					<div class="playerArea">
+						<div class="playerDeck"><img src="img/cardback.jpg"></div>
+						<div class="playerCard"></div>
+					</div><!-- End playerArea div -->
+
+					<div class="result"></div><br>
+					<div class="middleGround">
+						<button class="deal" onclick="deal()">DEAL</button><br>
+						<button class="newGame" onclick="location.reload()">NEW GAME</button>
+					</div><br><!-- End middleGround div -->
+					
+					<div class="compCount"></div>
+					<div class="compArea">
+						<div class="compDeck"><img src="img/cardback.jpg"></div>
+						<div class="compCard"></div>
+					</div><!-- End compArea div -->
+				</div><!-- End mobile div -->
+			</div><!-- End gameboard div -->
+
+		</div><!-- End boardwrap div -->
+
+
             </div>
           </div>
         </div>
