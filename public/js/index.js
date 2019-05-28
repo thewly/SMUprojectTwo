@@ -7,10 +7,9 @@ $(document).ready(function() {
   $("#search-btn").on("click", function (event) {
     event.preventDefault();
     console.log("button-test");
-    var memeSearched = $("#meme-search").val().trim();
-    var postData = {
-      memeSearched: memeSearched
-    };
+    var memeSearched = $("#meme-search")
+      .val()
+      .trim();
     //Make an AJAX get request to our api
     $.get("/api/memes/search/" + memeSearched, function() {
       console.log("posting?");
@@ -62,8 +61,6 @@ function handleMemeDelete() {
   console.log("Delete hit!");
   var currentMeme = $(this)
     .parent()
-    .parent()
-    .parent()
     .data("meme");
   console.log(currentMeme);
   deleteMeme(currentMeme);
@@ -75,7 +72,7 @@ function deleteMeme(id) {
     url: "/api/memes/" + id
   }).then(function() {
     location.reload();
-    window.location.href = "/#AllMemes";
+    console.log("delete hit");
   });
 }
 
