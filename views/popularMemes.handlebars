@@ -1,17 +1,17 @@
 <body class="body4">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-      <a class="navbar-brand text-white" href="/">Meme Database</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active ">
-            <a class="nav-link text-white " href="/popularMemes">Popular Memes</a>
-          </li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+    <a class="navbar-brand text-white" href="/">Meme Database</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active ">
+          <a class="nav-link text-white " href="/popularMemes">Popular Memes</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="/categories">Categories</a>
         </li>
@@ -29,13 +29,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="/searchResults">Search</a>
-        </li>        
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" id="meme-search" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-primary mb-2 my-sm-0" type="submit" id="search-btn">Search</button>
       </form>
-       </div>
+    </div>
   </nav>
   <br><br><br><br>
 
@@ -44,38 +44,41 @@
 
 
 
-  
 
-<div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            <div id="mowbg" class="col-sm-12 text-white">
-              <h1 class="mowH">Popular Memes</h1>
-            </div>
-            <div class="col-sm-4">
 
-            </div>
-            <div class="col-sm-4">
-
-            </div>
-          </div>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div id="mowbg" class="col-sm-12 text-white">
+          <h1 class="mowH">Popular Memes</h1>
         </div>
-        <div class="container">
-          <div class="row">
-            <div id="memeRow1" class="col-sm-12">
-              Memes will post here
-            </div>
-          </div>
+        <div class="col-sm-4">
+
         </div>
+        <div class="col-sm-4">
 
-
+        </div>
       </div>
-
     </div>
+    <div class="container">
+      <div class="row">
+        <div class=" col-sm-6 text-center">
+          {{#each Meme}}
+          {{> memes/meme-block}}
+          {{/each}}
+        </div>
       </div>
-    </header>
+    </div>
+  </div>
+
+
+  </div>
+
+  </div>
+  </div>
+  </header>
 
   </div>
   <div class="bg">
-    </div>
+  </div>
 </body>

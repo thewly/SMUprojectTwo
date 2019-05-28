@@ -9,15 +9,6 @@ module.exports = function(app) {
     });
   });
 
-  // Load example page and pass in an example by id
-  // app.get("/example/:id", function(req, res) {
-  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
-
   // Get all examples
   app.get("/api/memes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMemes) {
@@ -96,15 +87,17 @@ module.exports = function(app) {
 
   //Meme update
   app.put("/api/memes/:id", function(req, res) {
-    console.log(req.params.id);
+    console.log(req.body);
     db.Meme.update(req.body, {
       where: {
         id: req.params.id
       }
-    }).then(function() {
-      res.redirect("/");
+    }).then(function(dbMemes) {
+      res.json(dbMemes);
+      console.log("SMASH DAT MF'IN LIKE BUTTON RING DAT BELL");
     });
   });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
