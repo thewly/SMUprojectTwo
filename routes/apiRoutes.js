@@ -87,15 +87,17 @@ module.exports = function(app) {
 
   //Meme update
   app.put("/api/memes/:id", function(req, res) {
-    console.log(req.params.id);
+    console.log(req.body);
     db.Meme.update(req.body, {
       where: {
         id: req.params.id
       }
-    }).then(function() {
-      res.redirect("/");
+    }).then(function(dbMemes) {
+      res.json(dbMemes);
+      console.log("SMASH DAT MF'IN LIKE BUTTON RING DAT BELL");
     });
   });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

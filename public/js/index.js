@@ -52,7 +52,7 @@ function submitMeme(Meme) {
     console.log("test" + data);
     //don't need reload
     location.reload();
-    window.location.href = "/#AllMemes";
+    window.location.href = "/AllMemes";
   });
 }
 
@@ -79,27 +79,24 @@ function deleteMeme(id) {
 //Like Stuff
 function handleMemeLike() {
   console.log("Meme liked!");
-  var currentLike = $(this)
+  var id = $(this)
     .parent()
-    .data("likes");
+    .data("meme");
+  var currentLike = $(this).data("likes");
   if (currentLike === "") {
     console.log("in here!");
     currentLike = 0;
     //console.log(currentLike);
   } //else {
   console.log(currentLike);
-  likeMeme(currentLike);
+  likeMeme(currentLike, id);
 }
 
-function likeMeme(like) {
-  var id = $(this)
-    .parent()
-    .parent()
-    .parent()
-    .data("meme");
+function likeMeme(like, id) {
   like++;
   var newLike = like;
-  var data = { "importance": "newLike" };
+  var data = { "importance": newLike };
+  console.log(id);
   console.log(data);
   $.ajax({
     type: "PUT",
@@ -107,13 +104,16 @@ function likeMeme(like) {
     url: "/api/memes/" + id
   }).then(function() {
     location.reload();
-    window.location.href = "/#AllMemes";
   });
 }
 
 //Save Stuff
 function handleMemeSave() {
   console.log("Meme Saved!");
+  var currentMeme = $(this)
+    .parent()
+    .data("meme");
+  console.log(currentMeme);
 }
 
 //
