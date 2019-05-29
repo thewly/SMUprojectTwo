@@ -52,6 +52,16 @@ module.exports = function(app) {
 
   app.get("/popularMemes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMeme) {
+      dbMeme.sort(function compare(a, b) {
+        if (a.importance > b.importance) {
+          return -1;
+        }
+        if (a.importance < b.importance) {
+          return 1;
+        }
+        // a must be equal to b
+        return 0;
+      });
       res.render("popularMemes", {
         Meme: dbMeme
       });

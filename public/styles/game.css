@@ -1,3 +1,12 @@
+/*
+	game.css
+	Tyler Roland
+	Modified 11/21/17
+	War style sheet
+*/
+
+/* -- Imported fonts -- */
+
 @font-face {
 	font-family: Komtit; 
 	src: url(fonts/KOMTIT.ttf);
