@@ -19,7 +19,7 @@
 
 /* -- General styles -- */
 
-body {
+.bodyWAR {
 	background-color: #30415D; 
 	color: #fff;
 	font-family: Lato, sans-serif; 
@@ -29,23 +29,18 @@ body {
 	text-align: center;
 }
 
-button {
-	border: 0;
-	box-shadow: 3px 3px 3px #222;
-	color: #222; 
-	cursor: pointer;
-	font-family: Lato;
-	font-size: 25px; 
-	margin: 10px auto;
-	padding: 10px 0;
-	width: 170px; 
-}
 
-button:hover {
+#playButton:hover {
+	background-color: #ccc;
+}
+.deal:hover {
+	background-color: #ccc;
+}
+.newGame:hover {
 	background-color: #ccc;
 }
 
-h1 {
+.h1WAR {
 	font-size: 100px; 
 	font-family: Komtit; 
 	font-weight: bolder;
@@ -53,18 +48,18 @@ h1 {
 	padding: 0;
 }
 
-h2 {
+.howTo {
 	font-size: 40px;
 }
 
-h3 {
+.h3Class, #header {
 	font-size: 40px; 
 	font-family: Komtit; 
 	margin: 0;
 	padding: 0; 
 }
 
-img {
+.cards, #cards {
 	border-radius: 10px; 
 	box-shadow: 3px 3px 3px #222;
 	width: 100%;
@@ -115,9 +110,16 @@ footer {
 	margin-top: 100px;
 }
 
-#playButton {
-	margin-top: 20px;
-	width: 150px;
+#playButton, .deal, .newGame {
+	border: 0;
+	box-shadow: 3px 3px 3px #222;
+	color: #222; 
+	cursor: pointer;
+	font-family: Lato;
+	font-size: 25px; 
+	margin: 10px auto;
+	padding: 10px 0;
+	width: 170px; 
 }
 
 #warAnimation {

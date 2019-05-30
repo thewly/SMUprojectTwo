@@ -55,7 +55,9 @@ function deal() {
   var img2 = document.createElement('img');
 
   img.src = ("/img/" + playerHand[0] + ".png");
+  img.className = (' cards');
   img2.src = ("/img/" + compHand[0] + ".png");
+  img2.className = (' cards')
 
   //adds card image to the card slot of the game board
   $('.playerCard').append(img).animateCss("flipInY");
@@ -330,7 +332,7 @@ window.onload = function() {
 $.fn.extend({
   animateCss: function(animationName, callback) {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    this.addClass('animated ' + animationName).one(animationEnd, function() {
+    this.addClass('animated ' + animationName + ' cards').one(animationEnd, function() {
       $(this).removeClass('animated ' + animationName);
       if (callback) {
         callback();
