@@ -1,4 +1,4 @@
-<body>
+<body class="bodyWAR"> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
       <a class="navbar-brand text-white" href="/">Meme Database</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -45,18 +45,18 @@
           <div class="row">
             <div id="ambg" class="col-sm-12 bg-dark text-white">
               <div class='jumbotron' id='jumbotron'>
-			<h1 class='animated flipInX'>WAR!</h1>
-			<h3 class='animated lightSpeedIn'>Classic. Deadly.</h3>
+			<h1 class='animated flipInX h1WAR'>WAR!</h1>
+			<h3 class='animated lightSpeedIn h3Class'>Classic. Deadly.</h3>
 		</div><!-- end jumbotron div -->
 
 		<div id='header' style="display: none;">
-			<h3>WAR!</h3>
+			<h3 class="h3WAR">WAR!</h3>
 		</div><!-- end header -->
 
 		<div id="boardwrap">
 
 			<div id='howToPlay'>
-				<h2><u>How To Play</u></h2>
+				<h2 class="howTo"><u>How To Play</u></h2>
 
 				<div id="howTo">
 					<div>The game is simple. Draw one card and compare it against the computer's. Highest card wins, and winner takes both cards. Play until one person has all of the cards.</div>
@@ -85,21 +85,21 @@
 					</div><!--End gameHeader div -->
 					
 					<div class="gameTable">
-						<div class="playerDeck"><img src="img/cardback.jpg"></div>
+						<div class="playerDeck"><img class="cards" src="img/cardback.jpg"></div>
 						<div class="playerCard"></div>
 						<div class="middleGround">
 							<button class="deal" onclick="deal()">DEAL</button><br>
 							<button class="newGame" onclick="location.reload()">NEW GAME</button>
 						</div><!-- End middleGround div -->
 						<div class="compCard"></div>
-						<div class="compDeck"><img src="img/cardback.jpg"></div>
+						<div class="compDeck"><img class="cards" src="img/cardback.jpg"></div>
 					</div><!-- End gameTable div -->
 				</div><!-- End desktop div -->
 
 				<div id='mobile' class="game animated fadeInLeft">
 					<div class="playCount"></div><br>
 					<div class="playerArea">
-						<div class="playerDeck"><img src="img/cardback.jpg"></div>
+						<div class="playerDeck"><img class="cards" src="img/cardback.jpg"></div>
 						<div class="playerCard"></div>
 					</div><!-- End playerArea div -->
 
@@ -111,7 +111,7 @@
 					
 					<div class="compCount"></div>
 					<div class="compArea">
-						<div class="compDeck"><img src="img/cardback.jpg"></div>
+						<div class="compDeck"><img class="cards" src="img/cardback.jpg"></div>
 						<div class="compCard"></div>
 					</div><!-- End compArea div -->
 				</div><!-- End mobile div -->
